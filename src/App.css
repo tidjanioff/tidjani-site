@@ -25,15 +25,18 @@
 }
 
 body {
-    background-color: var(--background-color);
-    display: flex;
-    justify-content: center;
-    margin: 0 auto 60px;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
 #root {
     display: flex;
     flex-direction: column;
+    justify-self: center;
     gap: 60px;
 }
 
@@ -112,7 +115,7 @@ li {
     }
 }
 
-@media (widht >= 1400px) {
+@media (width >= 1400px) {
     #root {
         gap: 200px;
     }

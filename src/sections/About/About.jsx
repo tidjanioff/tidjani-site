@@ -12,19 +12,19 @@ function About() {
   const { theme, toggleTheme } = useTheme()
 
   const refTitle = useRef(null);
-  const IsInViewTitle = useInView(refTitle)
+  const IsInViewTitle = useInView(refTitle, {once:true})
 
   const refCard1 = useRef(null);
-  const IsInViewCard1 = useInView(refCard1)
+  const IsInViewCard1 = useInView(refCard1, {once:true})
 
   const refCard2 = useRef(null);
-  const IsInViewCard2 = useInView(refCard2)
+  const IsInViewCard2 = useInView(refCard2, {once:true})
 
   const refCard3 = useRef(null);
-  const IsInViewCard3 = useInView(refCard3)
+  const IsInViewCard3 = useInView(refCard3, {once:true})
 
   const refCard4 = useRef(null);
-  const IsInViewCard4 = useInView(refCard4)
+  const IsInViewCard4 = useInView(refCard4, {once:true})
   
   const udem = theme === "light" ? udemLight : udemDark;
   return (
