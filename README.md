@@ -1,12 +1,37 @@
-# React + Vite
+# 🌐 Tidjani’s Personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[**tidjani-d.com**](link) is a responsive and modern personal website built with **React** and **Vite**. It showcases my projects, skills, and personal background in a clean, component-based UI.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 👨‍💻 Overview
 
-## Expanding the ESLint configuration
+This project is my personal space on the web — a digital CV built to present who I am and what I do as an Aspiring Software Engineer. It's structured around clarity, simplicity, and usability.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 💡 Main Sections
+
+- 🖼️ **Hero** — Intro with name, title, socials and a call-to-action 
+- 🧪 **Projects** — Featured work with **Live Demos** and **GitHub repository links**
+- ⚙️ **Skills** — Technologies I use
+- 👤 **About** — Quick bio and background
+- 📬 **Contact** — Contact link
+- ⚓ **Footer** — Copyrights
+
+## 🌐 Live Demo
+
+Check out the live version here:  
+🔗 [link](tidjani-d.com)
+
+
+## ⚙️ Technologies Used
+
+- React.js
+- Vite 
+- JSX
+- CSS3
+- JavaScript (ES6+)
+- Netlify (for hosting)
+
+
+---
+
+Copyright © 2025 | Built by Tidjani. All rights reserved.
