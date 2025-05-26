@@ -1,6 +1,6 @@
 # 🌐 Tidjani’s Personal Website
 
-[**tidjani-d.com**](link) is a responsive and modern personal website built with **React** and **Vite**. It showcases my projects, skills, and personal background in a clean, component-based UI.
+[**tidjani-d.com**](https://tidjani-d.com) is a responsive and modern personal website built with **React** and **Vite**. It showcases my projects, skills, and personal background in a clean, component-based UI.
 
 
 ## 👨‍💻 Overview
@@ -19,7 +19,7 @@ This project is my personal space on the web — a digital CV built to present w
 ## 🌐 Live Demo
 
 Check out the live version here:  
-🔗 [link](tidjani-d.com)
+🔗 [tidjani-d.com](https://tidjani-d.com)
 
 
 ## ⚙️ Technologies Used
