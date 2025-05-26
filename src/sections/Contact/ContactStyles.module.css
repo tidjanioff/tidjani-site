@@ -1,0 +1,38 @@
+
+
+.mail {
+    width: 30px;
+    margin-right: 10px;
+    align-self: center;
+}
+a {
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    align-self: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.mailContainer {
+    display: flex;
+    justify-content: center;
+    border:2px solid var(--text-color);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 17px;
+    padding-right: 17px;
+    max-width: fit-content;
+    margin: 2rem auto;
+    border-radius:12px;
+    transition: transform 0.5s ease;
+    
+}
+
+.mailContainer:hover {
+    transform: scale(1.05);
+}
+
+

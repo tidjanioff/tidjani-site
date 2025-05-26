@@ -1,0 +1,126 @@
+:root {
+    --background-color: #ffffff;
+    --btn-color: #ffffff;
+    --btn-text-color: #00152e;
+    --btn-shadow-color: #00152e;
+    --project-card-bg: #ffffff;
+    --text-color: #00152e;
+    --form-text-color: #555;
+    --footer-text-color: #888;
+    --github-background-color: #008894;
+    --shadow-color: rgba(18, 18, 18, .1);
+}
+
+[data-theme = 'dark'] {
+    --background-color: #212121;
+    --btn-color: #0e0e0e;
+    --btn-text-color: #ffffff;
+    --btn-shadow-color: #f3feff;
+    --project-card-bg: #212121;
+    --text-color: #ffffff;
+    --form-text-color: #fff;
+    --footer-text-color: #bbb;
+    --github-background-color: #baf9ff;
+    --shadow-color: rgba(255, 255, 255, 0.64);
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+h1,h2,h3,p,li {
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3, p, li {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+}
+
+h2, h3 {
+    font-size: 20px;
+}
+
+h1 {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 35px;
+    letter-spacing: 4px;
+    font-weight: 800;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.sectionTitle {
+    margin-bottom: 30px;
+}
+
+.hover {
+    cursor: pointer;
+
+}
+
+.projectCard {
+    transition: transform 0.5s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-1rem);
+}
+li {
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+@media (width >= 800px) {
+    #root {
+        gap: 100px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    h2,
+    h3 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 20px;
+    }
+
+    .sectionTitle {
+        margin-bottom: 60px;
+    }
+}
+
+@media (widht >= 1400px) {
+    #root {
+        gap: 200px;
+    }
+    h1 {
+        font-size: 48px;
+    }
+
+    .sectionTitle {
+        margin-bottom: 75px;
+    }
+}

@@ -1,0 +1,126 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    height: 100dvh;
+    min-height: 500px;
+
+    .hero {
+        max-width: 200px;
+    }
+
+    
+    span{
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        transition: transform 0.3s ease;
+
+        a {
+            margin: 0;
+
+            img {
+                width: 30px;
+            }
+
+        }
+  
+    };
+
+    a {
+        width: fit-content;
+        align-self: center;
+    }
+
+    button {
+        background-color: var(--btn-color);
+        color: var(--btn-text-color);
+        align-items: center;
+        border-radius: 12px;
+        box-shadow: transparent 0 0 0 1px,rgba(18, 18, 18, .1) 0 6px 20px;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: inline-flex;
+        flex: 1 1 auto;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        justify-content: center;
+        line-height: 1;
+        margin: 0;
+        outline: none;
+        padding: 1rem 1.2rem;
+        text-align: center;
+        text-decoration: none;
+        transition: box-shadow .2s,-webkit-box-shadow .2s;
+        white-space: nowrap;
+        border: 0;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+    button:hover {
+        box-shadow: var(--btn-shadow-color) 0 0 0 2px, transparent 0 0 0 0;
+    }
+    span:hover {
+        transform: scale(1.2);
+    }
+
+    
+}
+
+.colorModeContainer {
+    position: relative;
+}
+
+.colorMode {
+    position:absolute;  
+    width: 25px;
+    transition: transform 0.3s ease;
+}
+
+.colorMode:hover {
+    cursor: pointer;
+    transform: rotate(-30deg);
+}
+
+.description {
+    max-width: 31.2ch;
+    align-self: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (width >= 800px) {
+    .container {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 40px;
+
+        .hero {
+            max-width: 350px;
+            width: 350px;
+        }
+    }
+}
+
+@media (width >= 1400px) {
+    .container {
+        .hero {
+            max-width: 400px;
+            width: 400px;
+        }
+    }
+}
