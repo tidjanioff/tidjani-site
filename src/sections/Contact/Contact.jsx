@@ -24,7 +24,7 @@ function Contact() {
         className='sectionTitle'>Contact me</motion.h1>
         <motion.div
         ref={refContact}
-         initial={{x:100}} animate={isInViewContact ? {x:0}: {}}
+         initial={{opacity:0}} animate={isInViewContact ? {opacity:1}: {}}
             transition={{duration:1}}>
               <div className={styles.mailContainer}>
                 <img className={styles.mail}  src={mailIcon}/>

@@ -120,11 +120,11 @@ function Skills() {
         <div>
             <motion.h2
                 ref={refSubTitlePL}
-                initial={{x:100, opacity:0}} animate={IsInViewSubTitlePL ? {x:0, opacity:1}: {}}
+                initial={{y:50, opacity:0}} animate={IsInViewSubTitlePL ? {y:0, opacity:1}: {}}
                 transition={{duration:1}}>Programming Languages</motion.h2>
             <motion.hr
             ref={refSubTitleBRPL}
-            initial={{x:-100, opacity:0}} animate={IsInViewSubtitleBRPL?{x:0, opacity:1}:{}}
+            initial={{y:50, opacity:0}} animate={IsInViewSubtitleBRPL?{y:0, opacity:1}:{}}
             transition={{duration:1}}></motion.hr>
             <div className={styles.skillSection}>
                 <motion.div 
@@ -179,11 +179,11 @@ function Skills() {
             </div>
             <motion.h2
                 ref={refSubTitleFL}
-                initial={{x:-100, opacity:0}} animate={IsInViewSubTitleFL ?{x:0, opacity:1}: {}}
+                initial={{y:-50, opacity:0}} animate={IsInViewSubTitleFL ?{y:0, opacity:1}: {}}
                 transition={{duration:1}}>Frameworks & Libraries</motion.h2>
             <motion.hr
             ref={refSubTitleBRFL}
-            initial={{x:100, opacity:0}} animate={IsInViewSubtitleBRFL? {x:0, opacity:1}: {}}
+            initial={{y:-50, opacity:0}} animate={IsInViewSubtitleBRPL?{y:0, opacity:1}:{}}
             transition={{duration:1}}></motion.hr>
             <div className={styles.skillSection}>
                 
@@ -238,11 +238,11 @@ function Skills() {
             </div>
             <motion.h2
                 ref={refSubTitleDT}
-                initial={{x:100, opacity:0}} animate={IsInViewSubTitleDT? {x:0, opacity:1}: {}}
+                initial={{y:50, opacity:0}} animate={IsInViewSubTitleDT? {y:0, opacity:1}: {}}
                 transition={{duration:1}}>Development Tools</motion.h2>
             <motion.hr
             ref={refSubTitleBRDT}
-            initial={{x:-100, opacity:0}} animate={IsInViewSubtitleBRDT? {x:0, opacity:1}: {}}
+            initial={{y:50, opacity:0}} animate={IsInViewSubtitleBRDT? {y:0, opacity:1}: {}}
             transition={{duration:1}}></motion.hr>
             <div className={styles.skillSection}>
                 
@@ -299,11 +299,11 @@ function Skills() {
             </div>
             <motion.h2
                 ref={refSubTitleDP}
-                initial={{x:-100, opacity:0}} animate={IsInViewSubTitleDP? {x:0, opacity:1}: {}}
+                initial={{y:-50, opacity:0}} animate={IsInViewSubTitleDP? {y:0, opacity:1}: {}}
                 transition={{duration:1}}>Design & Prototyping</motion.h2>
             <motion.hr
             ref={refSubTitleBRDP}
-            initial={{x:100, opacity:0}} animate={IsInViewSubtitleBRDP? {x:0, opacity:1}:{}}
+            initial={{y:-50, opacity:0}} animate={IsInViewSubtitleBRDP? {y:0, opacity:1}:{}}
             transition={{duration:1}}></motion.hr>
             <div className={styles.skillSection}>
                 <motion.div 
