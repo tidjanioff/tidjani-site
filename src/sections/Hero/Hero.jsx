@@ -73,14 +73,14 @@ function Hero() {
                             src={githubIcon} alt='Github icon'/>
                         </a>
                     </span>
-                    <span>
+                    {/* <span>
                         <a href='https://www.youtube.com/@tidjani1' target='_blank'>
                             <motion.img 
                             initial={{opacity:0, y:30}} animate={{opacity:1, y:0}}
                             transition={{duration:0.6, delay:0.7}}
                             src={youtubeIcon} alt='youtube icon'/>
                         </a>
-                    </span>
+                    </span> */}
                 </div>
                 <motion.p 
                 initial={{opacity:0, y:30}} animate={{opacity:1, y:0}}
