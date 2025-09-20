@@ -6,11 +6,13 @@ import Hero from './sections/Hero/Hero';
 import Projects from './sections/Projects/Projects';
 import Skills from './sections/Skills/Skills';
 import About from './sections/About/About';
+import Work from './sections/Work/Work';
 
 function App() {
   return (
   <>
     <Hero/>
+    <Work/>
     <Projects/>
     <Skills/>
     <About/>

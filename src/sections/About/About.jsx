@@ -97,7 +97,7 @@ function About() {
         ref={refCard4}
          initial={{y:100, opacity:0}}
         animate={IsInViewCard4? {y:0, opacity:1}:{}}
-        transition={{duration:1, delay:0.6}}
+        transition={{duration:1, delay:0.3}}
         >
           <div className={styles.timelineSection}>
           <h2 className={styles.timelineTitle}>September 2021 &#x2014; July 2023</h2>

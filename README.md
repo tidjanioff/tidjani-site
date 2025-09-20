@@ -10,6 +10,7 @@ This project is my personal space on the web — a digital CV built to present w
 ### 💡 Main Sections
 
 - 🖼️ **Hero** — Intro with name, title, socials and a call-to-action 
+- 💼 **Work Experience** — Internships and professional experience  
 - 🧪 **Projects** — Featured work with **Live Demos** and **GitHub repository links**
 - ⚙️ **Skills** — Technologies I use
 - 👤 **About** — Quick bio and background

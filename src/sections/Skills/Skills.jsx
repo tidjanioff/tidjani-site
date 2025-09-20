@@ -19,6 +19,7 @@ import vscode from '../../assets/vscode.png'
 import intellij from '../../assets/intellij.png'
 import pycharm from '../../assets/pycharm.png'
 import netlify from '../../assets/netlify.png'
+import docker from '../../assets/docker.png'
 import {motion, useInView} from 'framer-motion'
 import { useRef } from 'react'
 
@@ -66,6 +67,9 @@ function Skills() {
 
     const refCSS = useRef(null)
     const IsInViewCSS = useInView(refCSS, {once: true})
+
+    const refDocker = useRef(null)
+    const IsInViewDocker = useInView(refDocker, {once: true})
 
     const refSQL = useRef(null)
     const IsInViewSQL = useInView(refSQL, {once: true})
@@ -263,11 +267,19 @@ function Skills() {
                     <p>GitHub</p>
                 </motion.div>
 
+                <motion.div 
+                ref={refDocker}
+                initial={{opacity:0}} animate={IsInViewDocker? { opacity:1}: {}}
+                transition={{duration:1, delay:0.2}}
+                className={styles.skill}>
+                    <img src={docker}/>
+                    <p>Docker</p>
+                </motion.div>
 
                 <motion.div 
                 ref={refVSCode}
                 initial={{opacity:0}} animate={IsInViewVSCode? { opacity:1}: {}}
-                transition={{duration:1, delay:0.2}}
+                transition={{duration:1, delay:0.3}}
                 className={styles.skill}>
                     <img src={vscode}/>
                     <p>VS Code</p>
@@ -275,7 +287,7 @@ function Skills() {
                 <motion.div 
                 ref={refIntelliJ}
                 initial={{opacity:0}} animate={IsInViewIntelliJ ?{ opacity:1}:{}}
-                transition={{duration:1, delay:0.3}}
+                transition={{duration:1, delay:0.4}}
                 className={styles.skill}>
                     <img src={intellij}/>
                     <p>IntelliJ</p>
@@ -283,7 +295,7 @@ function Skills() {
                 <motion.div 
                 ref={refPyCharm}
                 initial={{opacity:0}} animate={IsInViewPyCharm?{ opacity:1}:{}}
-                transition={{duration:1, delay:0.4}}
+                transition={{duration:1, delay:0.5}}
                 className={styles.skill}>
                     <img src={pycharm}/>
                     <p>PyCharm</p>
@@ -291,7 +303,7 @@ function Skills() {
                 <motion.div 
                 ref={refNetlify}
                 initial={{opacity:0}} animate={IsInViewNetlify?{ opacity:1}:{}}
-                transition={{duration:1, delay:0.5}}
+                transition={{duration:1, delay:0.6}}
                 className={styles.skill}>
                     <img src={netlify}/>
                     <p>Netlify</p>

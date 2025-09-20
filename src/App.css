@@ -9,6 +9,7 @@
     --footer-text-color: #888;
     --github-background-color: #008894;
     --shadow-color: rgba(18, 18, 18, .1);
+    --company-name-color: #000000;
 }
 
 [data-theme = 'dark'] {
@@ -22,6 +23,7 @@
     --footer-text-color: #bbb;
     --github-background-color: #baf9ff;
     --shadow-color: rgba(255, 255, 255, 0.64);
+    --company-name-color: #ffffff;
 }
 
 body {
