@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { use } from 'react'
 import styles from './ProjectsStyles.module.css'
 import { useTheme } from '../../common/ThemeContext'
 import mblight from '../../assets/mb-light.png'
@@ -9,6 +9,8 @@ import umlight from '../../assets/um-light.png'
 import umdark from '../../assets/um-dark.png'
 import mpp from '../../assets/mp.png'
 import dna from '../../assets/dna.png'
+import aurumlight from '../../assets/aurum-arts-light.png'
+import aurumdark from '../../assets/aurum-arts-dark.png'
 import ProjectCard from '../../common/ProjectCard'
 import {motion, useInView} from "framer-motion"
 import { useRef } from "react"
@@ -18,8 +20,12 @@ function Projects() {
     const fn = theme === "light" ? fnlight : fndark;
     const mb = theme === "light" ? mblight : mbdark;
     const um = theme === "light" ? umlight : umdark;
+    const aurum = theme === "light" ? aurumlight : aurumdark;
     const refTitle = useRef(null);
     const isInViewTitle = useInView(refTitle, {once: true});
+
+    const refAa = useRef(null);
+    const isInViewAa = useInView(refAa, {once: true})
 
     const refMB = useRef(null);
     const isInViewMB = useInView(refMB, {once: true})
@@ -43,11 +49,25 @@ function Projects() {
         initial={{y:-50}} animate={isInViewTitle ? { y:0}: {}}
         transition={{duration:1}}
         className='sectionTitle'>Projects</motion.h1>
+        
         <div className={styles.projectContainer}>
+            <motion.div
+                ref={refAa}
+                initial={{opacity:0, y:50}} animate={isInViewAa ? {opacity:1, y:0}:{}}
+                transition={{duration:0.8, delay:0.1}}>
+
+                <ProjectCard 
+                    src={aurum} 
+                    ghlink="https://github.com/tidjanioff/aurum-arts" 
+                    ldlink="https://youtu.be/c9bU6j-J728"
+                    name= "Aurum Arts"
+                    description="Art Auction Platform"
+                />
+            </motion.div>
             <motion.div
                 ref={refMB}
                 initial={{opacity:0, y:50}} animate={isInViewMB ? {opacity:1, y:0}:{}}
-                transition={{duration:0.8, delay:0.1}}>
+                transition={{duration:0.8, delay:0.2}}>
 
                 <ProjectCard 
                     src={mb} 
@@ -60,7 +80,7 @@ function Projects() {
             <motion.div
                 ref={refFN}   
                 initial={{opacity:0, y:50}} animate={isInViewFN ? {opacity:1, y:0}: {}}
-                transition={{duration:0.8, delay:0.2}}>
+                transition={{duration:0.8, delay:0.3}}>
                 <ProjectCard 
                     src={fn} 
                     ghlink="https://github.com/tidjanioff/finTrack" 
@@ -72,7 +92,7 @@ function Projects() {
             <motion.div
                 ref={refUM}
                 initial={{opacity:0, y:50}} animate={isInViewUM ? {opacity:1, y:0}: {}}
-                transition={{duration:0.8, delay:0.3}}>
+                transition={{duration:0.8, delay:0.4}}>
                 <ProjectCard 
                     src={um} 
                     ghlink="https://github.com/tidjanioff/umontreal-infoboard" 
