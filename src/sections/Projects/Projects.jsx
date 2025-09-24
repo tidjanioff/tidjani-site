@@ -8,7 +8,6 @@ import fndark from '../../assets/fn-dark.png'
 import umlight from '../../assets/um-light.png'
 import umdark from '../../assets/um-dark.png'
 import mpp from '../../assets/mp.png'
-import dna from '../../assets/dna.png'
 import aurumlight from '../../assets/aurum-arts-light.png'
 import aurumdark from '../../assets/aurum-arts-dark.png'
 import ProjectCard from '../../common/ProjectCard'
@@ -39,8 +38,7 @@ function Projects() {
     const refMPP = useRef(null);
     const isInViewMPP = useInView(refMPP, {once: true})
 
-    const refDNA = useRef(null);
-    const isInViewDNA = useInView(refDNA, {once: true})
+    
     
   return (
     <section id='projects' className={styles.container}>
@@ -113,18 +111,7 @@ function Projects() {
                     description="Meal Assistant"
                 />
             </motion.div>
-            <motion.div
-                ref={refDNA}
-                initial={{opacity:0, y:50}} animate={isInViewDNA ? {opacity:1, y:0}: {}}
-                transition={{duration:0.8, delay:0.5}}>
-                <ProjectCard 
-                    src={dna} 
-                    ghlink="https://github.com/tidjanioff/DNA2Protein" 
-                    ldlink="https://dna2protein.netlify.app/livedemo.html"
-                    name= "DNA2Protein"
-                    description="DNA Translation Tool"
-                />
-            </motion.div>
+
         </div>
     </section>
     )
