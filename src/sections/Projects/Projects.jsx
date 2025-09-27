@@ -10,6 +10,8 @@ import umdark from '../../assets/um-dark.png'
 import mpp from '../../assets/mp.png'
 import aurumlight from '../../assets/aurum-arts-light.png'
 import aurumdark from '../../assets/aurum-arts-dark.png'
+import psLight from '../../assets/ps-light.png'
+import psDark from '../../assets/ps-dark.png'
 import ProjectCard from '../../common/ProjectCard'
 import {motion, useInView} from "framer-motion"
 import { useRef } from "react"
@@ -20,11 +22,15 @@ function Projects() {
     const mb = theme === "light" ? mblight : mbdark;
     const um = theme === "light" ? umlight : umdark;
     const aurum = theme === "light" ? aurumlight : aurumdark;
+    const ps = theme === "light" ? psLight : psDark;
     const refTitle = useRef(null);
     const isInViewTitle = useInView(refTitle, {once: true});
 
     const refAa = useRef(null);
     const isInViewAa = useInView(refAa, {once: true})
+
+    const refPs = useRef(null);
+    const isInViewPs = useInView(refPs, {once: true})
 
     const refMB = useRef(null);
     const isInViewMB = useInView(refMB, {once: true})
@@ -60,6 +66,19 @@ function Projects() {
                     ldlink="https://youtu.be/c9bU6j-J728"
                     name= "Aurum Arts"
                     description="Art Auction Platform"
+                />
+            </motion.div>
+            <motion.div
+                ref={refPs}
+                initial={{opacity:0, y:50}} animate={isInViewPs ? {opacity:1, y:0}:{}}
+                transition={{duration:0.8, delay:0.1}}>
+
+                <ProjectCard 
+                    src={ps} 
+                    ghlink="https://github.com/tidjanioff/pyrosat" 
+                    ldlink="https://youtu.be/2H3iaNIwPcE"
+                    name= "PyroSat"
+                    description="Wildfire Tracker"
                 />
             </motion.div>
             <motion.div
