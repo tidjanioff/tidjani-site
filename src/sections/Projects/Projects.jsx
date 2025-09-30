@@ -71,7 +71,7 @@ function Projects() {
             <motion.div
                 ref={refPs}
                 initial={{opacity:0, y:50}} animate={isInViewPs ? {opacity:1, y:0}:{}}
-                transition={{duration:0.8, delay:0.1}}>
+                transition={{duration:0.8, delay:0.2}}>
 
                 <ProjectCard 
                     src={ps} 
@@ -84,7 +84,7 @@ function Projects() {
             <motion.div
                 ref={refMB}
                 initial={{opacity:0, y:50}} animate={isInViewMB ? {opacity:1, y:0}:{}}
-                transition={{duration:0.8, delay:0.2}}>
+                transition={{duration:0.8, delay:0.3}}>
 
                 <ProjectCard 
                     src={mb} 
@@ -97,7 +97,7 @@ function Projects() {
             <motion.div
                 ref={refFN}   
                 initial={{opacity:0, y:50}} animate={isInViewFN ? {opacity:1, y:0}: {}}
-                transition={{duration:0.8, delay:0.3}}>
+                transition={{duration:0.8, delay:0.4}}>
                 <ProjectCard 
                     src={fn} 
                     ghlink="https://github.com/tidjanioff/finTrack" 
@@ -109,7 +109,7 @@ function Projects() {
             <motion.div
                 ref={refUM}
                 initial={{opacity:0, y:50}} animate={isInViewUM ? {opacity:1, y:0}: {}}
-                transition={{duration:0.8, delay:0.4}}>
+                transition={{duration:0.8, delay:0.5}}>
                 <ProjectCard 
                     src={um} 
                     ghlink="https://github.com/tidjanioff/umontreal-infoboard" 
@@ -121,7 +121,7 @@ function Projects() {
             <motion.div
                 ref={refMPP}
                 initial={{opacity:0, y:50}} animate={isInViewMPP ? {opacity:1, y:0}: {}}
-                 transition={{duration:0.8, delay:0.4}}>
+                 transition={{duration:0.8, delay:0.6}}>
                 <ProjectCard 
                     src={mpp} 
                     ghlink="https://github.com/tidjanioff/meal-prep-pro" 

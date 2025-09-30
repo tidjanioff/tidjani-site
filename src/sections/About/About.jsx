@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './AboutStyles.module.css'
-import harvard from '../../assets/harvard.svg.png'
 import udemLight from '../../assets/udem-light.png'
 import udemDark from '../../assets/udem-dark.png'
 import csmh from '../../assets/csmh.png'
+import tidjani from '../../assets/tidjani.jpg'
 import { useTheme } from '../../common/ThemeContext'
 import {motion, useInView} from 'framer-motion'
 import { useRef } from 'react'
@@ -37,33 +37,19 @@ function About() {
           marginBottom:'50px',
         }}>About Me</motion.h1>
         <div className={styles.timelineContainer}>
-          <motion.div
-          ref={refCard1}
-        initial={{y:-50, opacity:0}}
-        animate={IsInViewCard1? {y:0, opacity:1}: {}}
-        transition={{duration:1}}>
-            <div 
-        className={styles.timelineSection}>
-          <h2 className={styles.timelineTitle}>2025 &#x2014; Present</h2>
-          <h3 className={styles.timelineDescription}>&#128142; Deepening my knowledge in Software Engineering</h3>
-          <p>Currently focused on practical skills in full-stack development, — designing and deploying web, mobile, and desktop applications.<br></br>
-              This involves hands-on experience with DevOps workflows, cloud platforms, and UI/UX design.<br></br>
-              I'm also exploring more advanced areas, with a strong interest in Artificial Intelligence, Machine Learning, and growing curiosity around cybersecurity and game development.
-          </p>
-        </div>
-          </motion.div>
+          
         <motion.div
         ref={refCard2}
-        initial={{opacity:0}}
-        animate={IsInViewCard2?{opacity:1}:{}}
+        initial={{y:-100, opacity:0}}
+        animate={IsInViewCard2?{y:0, opacity:1}:{}}
         transition={{duration:1, delay:0.2}}
         >
         <div className={styles.timelineSection}>
           <h2 className={styles.timelineTitle}>January 2024 &#x2014; Present</h2>
           <h3 className={styles.timelineDescription}>&#127891; B.Sc. in Computer Science @ Université de Montréal </h3>
-              <p>Building a solid academic foundation in computer science through a balanced mix of programming, systems, math, and user experience.<br></br>
-                From writing code and understanding computer architecture to designing intuitive interfaces and modeling real-world problems, every course helps me think more like an engineer.<br></br>
-                This blend of theory and hands-on learning is shaping how I approach software: with reliability, scalability, and the user in mind.
+              <p>Building a strong foundation in computer science through programming, systems, math, and user experience — every course helps me think more like an engineer.  
+This mix of theory and practice is shaping how I approach software: reliable, scalable, and user-focused.
+
               </p>
               <div className={styles.logoHead}>
                 <img src={udem} className={styles.logo}
@@ -71,28 +57,27 @@ function About() {
               </div>
         </div>
         </motion.div>
+
         <motion.div
-        ref={refCard3}
-        initial={{y:-50, opacity:0}}
-        animate={IsInViewCard3? {y:0, opacity:1}:{}}
-        transition={{duration:1, delay:0.4}}
+        ref={refCard2}
+        initial={{opacity:0}}
+        animate={IsInViewCard2?{opacity:1}:{}}
+        transition={{duration:1, delay:0.2}}
         >
-          <div className={styles.timelineSection}>
-          <h2 className={styles.timelineTitle}>May 2024 &#x2014; July 2024</h2>
-          <h3 className={styles.timelineDescription}>&#128142; Completed CS50P – Introduction to Programming with Python @ Harvard Online</h3>
-          <p>Strengthened my programming fundamentals and problem-solving abilities by developing Python-based solutions to real-world problems. 
-            Throughout this work, I also improved my algorithmic thinking and wrote clearer, more structured code.
-            </p>
-          <div className={styles.logoHead}>
-            <img src={harvard} className={styles.logo}/>
-          </div>
-          <div className={styles.linkHead}>
-            <a href='https://certificates.cs50.io/2972b467-23f1-4fc2-b79f-5e17b623817f.pdf' target='_blank' className={styles.link}>
-              <button>View Certificate</button>
-            </a>
-          </div>
+        <div className={styles.timelineSection}>
+            <div className={styles.logoHead}>
+                <img src={tidjani} className={styles.tidjani}
+                />
+              </div>
+          <h2 className={styles.timelineTitle}>TIDJANI D.</h2>
+          <h3 className={styles.timelineDescription}>&#128104;&#127998;&#8205;&#128187; Aspiring Software Engineer</h3>
+        
+              <p>Focused on building smart, well-designed, and user-centered solutions, while staying open to exploring different fields in tech.
+              </p>
+              
         </div>
         </motion.div>
+
         <motion.div
         ref={refCard4}
          initial={{y:100, opacity:0}}

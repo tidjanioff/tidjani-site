@@ -86,7 +86,7 @@ function Hero() {
                 initial={{opacity:0, y:30}} animate={{opacity:1, y:0}}
                 transition={{duration:0.6}}
                 className={styles.description}>
-                Passionate about Artificial Intelligence, Machine Learning, and building smart solutions that solve real-world problems.
+                I build some tech stuff.
                 </motion.p>
                 <a href="mailto:tidjanioff@gmail.com">
                     <motion.button 

@@ -8,17 +8,14 @@ import css3 from '../../assets/css3.png'
 import sql from '../../assets/sql.png'
 import django from '../../assets/django.png'
 import reactlogo from '../../assets/react.png'
-import bootstrap from '../../assets/bootstrap.png'
-import sass from '../../assets/sass.png'
+
 import git from '../../assets/git.png'
 import github from '../../assets/github.png'
 import nodejs from '../../assets/nodejs.png'
-import vite from '../../assets/vite.png'
 import figma from '../../assets/figma.png'
 import vscode from '../../assets/vscode.png'
-import intellij from '../../assets/intellij.png'
-import pycharm from '../../assets/pycharm.png'
-import netlify from '../../assets/netlify.png'
+
+
 import docker from '../../assets/docker.png'
 import {motion, useInView} from 'framer-motion'
 import { useRef } from 'react'
@@ -80,17 +77,13 @@ function Skills() {
     const refReact = useRef(null)
     const IsInViewReact = useInView(refReact, {once: true})
 
-    const refBootstrap = useRef(null)
-    const IsInViewBootstrap = useInView(refBootstrap, {once: true})
 
-    const refSass = useRef(null)
-    const IsInViewSass = useInView(refSass, {once: true})
+
+    
 
     const refNodejs = useRef(null)
     const IsInViewNodejs = useInView(refNodejs, {once: true})
 
-    const refVite = useRef(null)
-    const IsInViewVite = useInView(refVite, {once: true})
 
     const refGit = useRef(null)
     const IsInViewGit = useInView(refGit, {once: true})
@@ -101,14 +94,9 @@ function Skills() {
     const refVSCode = useRef(null)
     const IsInViewVSCode = useInView(refVSCode, {once: true})
 
-    const refIntelliJ = useRef(null)
-    const IsInViewIntelliJ = useInView(refIntelliJ, {once: true})
 
-    const refPyCharm = useRef(null)
-    const IsInViewPyCharm = useInView(refPyCharm, {once: true})
 
-    const refNetlify = useRef(null)
-    const IsInViewNetlify = useInView(refNetlify, {once: true})
+
 
     const refFigma = useRef(null)
     const IsInViewFigma = useInView(refFigma, {once: true})
@@ -207,38 +195,16 @@ function Skills() {
                     <img src={reactlogo}/>
                     <p>React</p>
                 </motion.div>
-                <motion.div 
-                ref={refBootstrap}
-                initial={{opacity:0}} animate={IsInViewBootstrap?{ opacity:1}:{}}
-                transition={{duration:1, delay:0.2}}
-                className={styles.skill}>
-                    <img src={bootstrap}/>
-                    <p>Bootstrap</p>
-                </motion.div>
-                <motion.div 
-                ref={refSass}
-                initial={{opacity:0}} animate={IsInViewSass?{ opacity:1}: {}}
-                transition={{duration:1, delay:0.3}}
-                className={styles.skill}>
-                    <img src={sass}/>
-                    <p>Sass</p>
-                </motion.div>
+     
                 <motion.div 
                 ref={refNodejs}
                 initial={{opacity:0}} animate={IsInViewNodejs?{ opacity:1}:{}}
-                transition={{duration:1, delay:0.4}}
+                transition={{duration:1, delay:0.2}}
                 className={styles.skill}>
                     <img src={nodejs}/>
                     <p>Node.js</p>
                 </motion.div>
-                <motion.div 
-                ref={refVite}
-                initial={{opacity:0}} animate={IsInViewVite?{ opacity:1}:{}}
-                transition={{duration:1, delay:0.5}}
-                className={styles.skill}>
-                    <img src={vite}/>
-                    <p>Vite</p>
-                </motion.div>
+
             </div>
             <motion.h2
                 ref={refSubTitleDT}
@@ -284,30 +250,9 @@ function Skills() {
                     <img src={vscode}/>
                     <p>VS Code</p>
                 </motion.div>
-                <motion.div 
-                ref={refIntelliJ}
-                initial={{opacity:0}} animate={IsInViewIntelliJ ?{ opacity:1}:{}}
-                transition={{duration:1, delay:0.4}}
-                className={styles.skill}>
-                    <img src={intellij}/>
-                    <p>IntelliJ</p>
-                </motion.div>
-                <motion.div 
-                ref={refPyCharm}
-                initial={{opacity:0}} animate={IsInViewPyCharm?{ opacity:1}:{}}
-                transition={{duration:1, delay:0.5}}
-                className={styles.skill}>
-                    <img src={pycharm}/>
-                    <p>PyCharm</p>
-                </motion.div>
-                <motion.div 
-                ref={refNetlify}
-                initial={{opacity:0}} animate={IsInViewNetlify?{ opacity:1}:{}}
-                transition={{duration:1, delay:0.6}}
-                className={styles.skill}>
-                    <img src={netlify}/>
-                    <p>Netlify</p>
-                </motion.div>
+ 
+
+             
             </div>
             <motion.h2
                 ref={refSubTitleDP}

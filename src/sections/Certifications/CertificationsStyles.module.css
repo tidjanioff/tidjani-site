@@ -76,13 +76,6 @@
         text-align: center;
         
     }
-
-    .tidjani {
-        width:427px;
-        border-radius: 20px 20px 0px 0px;
-        margin-top: -49px;
-        margin-bottom: 20px;
-    }
 }
 
 .timelineSection:hover{
@@ -102,6 +95,8 @@
 .logoHead {
     display: flex;
     justify-content: center;
+
+    
 }
 
 .linkHead {
@@ -119,13 +114,6 @@
     }
     .timelineSection {
         width: 450px;
-
-        .tidjani {
-        width:470px;
-        border-radius: 20px 20px 0px 0px;
-        margin-top: -49px;
-        margin-bottom: 20px;
-    }
     }
     
     
