@@ -42,7 +42,7 @@ function About() {
         ref={refCard2}
         initial={{y:-100, opacity:0}}
         animate={IsInViewCard2?{y:0, opacity:1}:{}}
-        transition={{duration:1, delay:0.2}}
+        transition={{duration:1}}
         >
         <div className={styles.timelineSection}>
           <h2 className={styles.timelineTitle}>January 2024 &#x2014; Present</h2>
@@ -62,7 +62,7 @@ This mix of theory and practice is shaping how I approach software: reliable, sc
         ref={refCard2}
         initial={{opacity:0}}
         animate={IsInViewCard2?{opacity:1}:{}}
-        transition={{duration:1, delay:0.2}}
+        transition={{duration:1, delay:0.1}}
         >
         <div className={styles.timelineSection}>
             <div className={styles.logoHead}>
@@ -82,7 +82,7 @@ This mix of theory and practice is shaping how I approach software: reliable, sc
         ref={refCard4}
          initial={{y:100, opacity:0}}
         animate={IsInViewCard4? {y:0, opacity:1}:{}}
-        transition={{duration:1, delay:0.3}}
+        transition={{duration:1, delay:0.2}}
         >
           <div className={styles.timelineSection}>
           <h2 className={styles.timelineTitle}>September 2021 &#x2014; July 2023</h2>
