@@ -8,6 +8,10 @@ import css3 from '../../assets/css3.png'
 import sql from '../../assets/sql.png'
 import django from '../../assets/django.png'
 import reactlogo from '../../assets/react.png'
+import typescript from '../../assets/typescript.png'
+import tailwind from '../../assets/tailwind.png'
+import reactNativeLight from '../../assets/react-native-light.png'
+import reactNativeDark from '../../assets/react-native-dark.png'
 
 import git from '../../assets/git.png'
 import github from '../../assets/github.png'
@@ -19,10 +23,17 @@ import vscode from '../../assets/vscode.png'
 import docker from '../../assets/docker.png'
 import {motion, useInView} from 'framer-motion'
 import { useRef } from 'react'
+import { useTheme } from '../../common/ThemeContext'
 
+
+// Add TypeScript, React Native & Expo , Tailwind CSS, 
+// Nativewind 
 
 
 function Skills() {
+    const { theme, toggleTheme } = useTheme()
+    const reactNative = theme === "light" ? reactNativeLight : reactNativeDark;
+
     const refTitle = useRef(null)
     const IsInViewTitle = useInView(refTitle, {once: true})
 
@@ -77,8 +88,11 @@ function Skills() {
     const refReact = useRef(null)
     const IsInViewReact = useInView(refReact, {once: true})
 
+    const refTailwind = useRef(null)
+    const IsInViewTailwind = useInView(refTailwind, {once: true})
 
-
+    const refReactNative = useRef(null)
+    const IsInViewReactNative = useInView(refReactNative, {once: true})
     
 
     const refNodejs = useRef(null)
@@ -100,6 +114,13 @@ function Skills() {
 
     const refFigma = useRef(null)
     const IsInViewFigma = useInView(refFigma, {once: true})
+
+
+    const refTypeScript = useRef(null)
+    const IsInViewTypeScript = useInView(refTypeScript, {once: true})
+
+   
+
   return (
     <section id='skills' className={styles.container}>
         <motion.h1
@@ -142,12 +163,24 @@ function Skills() {
                 transition={{duration:2, delay:0.2}}
                 className={styles.skill}>
                     <img src={javascript}/>
-                    <p>Javascript</p>
+                    <p>JavaScript</p>
                 </motion.div>
+
+                <motion.div 
+                ref={refTypeScript}
+                initial={{opacity:0}} animate={IsInViewTypeScript?{ opacity:1}: {}}
+                transition={{duration:2, delay:0.3}}
+                className={styles.skill}>
+                    <img src={typescript}/>
+                    <p>TypeScript</p>
+                </motion.div>
+
+
+
                 <motion.div 
                 ref={refHTML}
                 initial={{opacity:0}} animate={IsInViewHTML?{ opacity:1}: {}}
-                transition={{duration:2, delay:0.3}}
+                transition={{duration:2, delay:0.4}}
                 className={styles.skill}>
                     <img src={html5}/>
                     <p>HTML</p>
@@ -155,7 +188,7 @@ function Skills() {
                 <motion.div 
                 ref={refCSS}
                 initial={{opacity:0}} animate={IsInViewCSS?{ opacity:1}:{}}
-                transition={{duration:2, delay:0.4}}
+                transition={{duration:2, delay:0.5}}
                 className={styles.skill}>
                     <img src={css3}/>
                     <p>CSS</p>
@@ -163,7 +196,7 @@ function Skills() {
                 <motion.div 
                 ref={refSQL}
                 initial={{opacity:0}} animate={IsInViewSQL?{ opacity:1}:{}}
-                transition={{duration:2, delay:0.5}}
+                transition={{duration:2, delay:0.6}}
                 className={styles.skill}>
                     <img src={sql}/>
                     <p>SQL</p>
@@ -203,6 +236,24 @@ function Skills() {
                 className={styles.skill}>
                     <img src={nodejs}/>
                     <p>Node.js</p>
+                </motion.div>
+
+                <motion.div 
+                ref={refTailwind}
+                initial={{opacity:0}} animate={IsInViewTailwind?{ opacity:1}:{}}
+                transition={{duration:1, delay:0.3}}
+                className={styles.skill}>
+                    <img src={tailwind}/>
+                    <p>Tailwind CSS</p>
+                </motion.div>
+
+                 <motion.div 
+                ref={refReactNative}
+                initial={{opacity:0}} animate={IsInViewReactNative?{ opacity:1}:{}}
+                transition={{duration:1, delay:0.4}}
+                className={styles.skill}>
+                    <img src={reactNative}/>
+                    <p>React Native</p>
                 </motion.div>
 
             </div>

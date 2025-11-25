@@ -1,7 +1,7 @@
 import React from 'react'
 import {motion} from "framer-motion"
 
-function ProjectCard({src, ghlink, ldlink, name, description}) {
+function ProjectCard({src, ghlink, ldlink, name, description, techStack}) {
   return (
     <motion.div 
 
@@ -16,7 +16,14 @@ function ProjectCard({src, ghlink, ldlink, name, description}) {
             <img className='hover' src={src} alt={`${name} logo`}/>
         </a>
         <h3>{name}</h3>
-        <p>{description}
+        <p style={{maxWidth: "250px"}}>{description}
+            {/* <br></br> */}
+            {/* <span style={{
+                fontSize:"14px",
+                fontWeight:"bold",
+                // fontStyle:"italic",
+               
+            }}>{techStack}</span> */}
         </p>
         <div className="buttons"
             style={{

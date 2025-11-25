@@ -44,7 +44,7 @@ function Certifications() {
         >
           <div className={styles.timelineSection}>
           <h2 className={styles.timelineTitle}>June 2025 &#x2014; August 2025</h2>
-          <h3 className={styles.timelineDescription}>&#128640; Earned Google Certification – Foundations of Project Management @ Coursera</h3>
+          <h3 className={styles.timelineDescription}>&#128142; Certified in Foundations of Project Management @ Google</h3>
           <p>Built a solid grounding in project management by exploring the full project life cycle, from initiation to closure. 
             Enhanced my skills in setting priorities, coordinating tasks, and communicating clearly with stakeholders.
             </p>

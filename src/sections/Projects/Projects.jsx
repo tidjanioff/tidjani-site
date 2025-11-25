@@ -10,6 +10,7 @@ import umdark from '../../assets/um-dark.png'
 import mpp from '../../assets/mp.png'
 import aurumlight from '../../assets/aurum-arts-light.png'
 import aurumdark from '../../assets/aurum-arts-dark.png'
+import homiq from '../../assets/homiq.png'
 import psLight from '../../assets/ps-light.png'
 import psDark from '../../assets/ps-dark.png'
 import ProjectCard from '../../common/ProjectCard'
@@ -25,6 +26,10 @@ function Projects() {
     const ps = theme === "light" ? psLight : psDark;
     const refTitle = useRef(null);
     const isInViewTitle = useInView(refTitle, {once: true});
+
+
+    const refHq = useRef(null);
+    const isInViewHq = useInView(refHq, {once: true})
 
     const refAa = useRef(null);
     const isInViewAa = useInView(refAa, {once: true})
@@ -56,9 +61,24 @@ function Projects() {
         
         <div className={styles.projectContainer}>
             <motion.div
+                ref={refHq}
+                initial={{opacity:0, y:50}} animate={isInViewHq ? {opacity:1, y:0}:{}}
+                transition={{duration:0.8, delay:0.1}}>
+
+                <ProjectCard 
+                    src={homiq} 
+                    ghlink="https://github.com/tidjanioff/homiq" 
+                    ldlink="https://youtu.be/rdeWqxG-DOU"
+                    name= "Homiq"
+                    description="Real Estate App"
+                    // techStack="React Native, TypeScript, Expo, NativeWind, Appwrite"
+                />
+            </motion.div>
+
+            <motion.div
                 ref={refAa}
                 initial={{opacity:0, y:50}} animate={isInViewAa ? {opacity:1, y:0}:{}}
-                transition={{duration:0.8, delay:0.1}}>
+                transition={{duration:0.8, delay:0.2}}>
 
                 <ProjectCard 
                     src={aurum} 
@@ -66,12 +86,14 @@ function Projects() {
                     ldlink="https://youtu.be/c9bU6j-J728"
                     name= "Aurum Arts"
                     description="Art Auction Platform"
+                    // techStack="Django, Python, JavaScript, HTML, CSS, SQLite3"
                 />
             </motion.div>
+            
             <motion.div
                 ref={refPs}
                 initial={{opacity:0, y:50}} animate={isInViewPs ? {opacity:1, y:0}:{}}
-                transition={{duration:0.8, delay:0.2}}>
+                transition={{duration:0.8, delay:0.3}}>
 
                 <ProjectCard 
                     src={ps} 
@@ -79,12 +101,13 @@ function Projects() {
                     ldlink="https://youtu.be/2H3iaNIwPcE"
                     name= "PyroSat"
                     description="Wildfire Tracker"
+                    // techStack="React, JavaScript, HTML, CSS"
                 />
             </motion.div>
             <motion.div
                 ref={refMB}
                 initial={{opacity:0, y:50}} animate={isInViewMB ? {opacity:1, y:0}:{}}
-                transition={{duration:0.8, delay:0.3}}>
+                transition={{duration:0.8, delay:0.4}}>
 
                 <ProjectCard 
                     src={mb} 
@@ -97,7 +120,7 @@ function Projects() {
             <motion.div
                 ref={refFN}   
                 initial={{opacity:0, y:50}} animate={isInViewFN ? {opacity:1, y:0}: {}}
-                transition={{duration:0.8, delay:0.4}}>
+                transition={{duration:0.8, delay:0.5}}>
                 <ProjectCard 
                     src={fn} 
                     ghlink="https://github.com/tidjanioff/finTrack" 
@@ -109,7 +132,7 @@ function Projects() {
             <motion.div
                 ref={refUM}
                 initial={{opacity:0, y:50}} animate={isInViewUM ? {opacity:1, y:0}: {}}
-                transition={{duration:0.8, delay:0.5}}>
+                transition={{duration:0.8, delay:0.6}}>
                 <ProjectCard 
                     src={um} 
                     ghlink="https://github.com/tidjanioff/umontreal-infoboard" 
@@ -121,7 +144,7 @@ function Projects() {
             <motion.div
                 ref={refMPP}
                 initial={{opacity:0, y:50}} animate={isInViewMPP ? {opacity:1, y:0}: {}}
-                 transition={{duration:0.8, delay:0.6}}>
+                 transition={{duration:0.8, delay:0.7}}>
                 <ProjectCard 
                     src={mpp} 
                     ghlink="https://github.com/tidjanioff/meal-prep-pro" 

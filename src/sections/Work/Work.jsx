@@ -52,7 +52,7 @@ function Work() {
                     <span className={styles.bebold}>&#10551;</span> Enhanced financial visibility by implementing automated revenue tracking with clear reports by period and payment method.
                     </div>
               </p><br></br>
-              <p><span className={styles.techUsed}>Django, JavaScript, HTML/CSS, Docker</span></p><br></br>
+              <p><span className={styles.techUsed}>Django, JavaScript, HTML/CSS, SQL, Docker</span></p><br></br>
               
             </div>
               </motion.div>
