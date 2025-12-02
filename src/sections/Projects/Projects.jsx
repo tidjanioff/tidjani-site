@@ -11,6 +11,8 @@ import mpp from '../../assets/mp.png'
 import aurumlight from '../../assets/aurum-arts-light.png'
 import aurumdark from '../../assets/aurum-arts-dark.png'
 import homiq from '../../assets/homiq.png'
+import alLight from '../../assets/astralink-light.png'
+import alDark from '../../assets/astralink-dark.png'
 import psLight from '../../assets/ps-light.png'
 import psDark from '../../assets/ps-dark.png'
 import ProjectCard from '../../common/ProjectCard'
@@ -24,6 +26,7 @@ function Projects() {
     const um = theme === "light" ? umlight : umdark;
     const aurum = theme === "light" ? aurumlight : aurumdark;
     const ps = theme === "light" ? psLight : psDark;
+    const al = theme === "light" ? alLight : alDark;
     const refTitle = useRef(null);
     const isInViewTitle = useInView(refTitle, {once: true});
 
@@ -49,6 +52,9 @@ function Projects() {
     const refMPP = useRef(null);
     const isInViewMPP = useInView(refMPP, {once: true})
 
+    const refAstraLink = useRef(null);
+    const isInViewAstraLink = useInView(refAstraLink, {once: true})
+
     
     
   return (
@@ -60,6 +66,21 @@ function Projects() {
         className='sectionTitle'>Projects</motion.h1>
         
         <div className={styles.projectContainer}>
+            <motion.div
+                ref={refAstraLink}
+                initial={{opacity:0, y:50}} animate={isInViewAstraLink ? {opacity:1, y:0}:{}}
+                transition={{duration:0.8, delay:0.1}}>
+
+                <ProjectCard 
+                    src={al} 
+                    ghlink="https://github.com/tidjanioff/astra-link" 
+                    ldlink="https://youtu.be/OMstUhgU58c"
+                    name= "AstraLink"
+                    description="Space Launch Tracker"
+                    // techStack="React Native, TypeScript, Expo, NativeWind, Appwrite"
+                />
+            </motion.div>
+
             <motion.div
                 ref={refHq}
                 initial={{opacity:0, y:50}} animate={isInViewHq ? {opacity:1, y:0}:{}}
