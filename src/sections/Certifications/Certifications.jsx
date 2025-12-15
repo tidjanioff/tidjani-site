@@ -35,12 +35,35 @@ function Certifications() {
           marginBottom:'50px',
         }}>Certifications</motion.h1>
         <div className={styles.timelineContainer}>
+
+        <motion.div
+        ref={refCard3}
+        initial={{y:-50, opacity:0}}
+        animate={IsInViewCard3? {y:0, opacity:1}:{}}
+        transition={{duration:1, delay:0.1}}
+        >
+          <div className={styles.timelineSection}>
+          <h2 className={styles.timelineTitle}>July 2024 &#x2014; December 2025</h2>
+          <h3 className={styles.timelineDescription}>&#128142; Completed CS50W – Web Programming with Python and JavaScript @ Harvard Online</h3>
+          <p> Developed solid web development skills by building full-stack applications with Python and JavaScript. 
+  This experience improved my understanding of backend logic, data persistence, and application structure.
+            </p>
+          <div className={styles.logoHead}>
+            <img src={harvard} className={styles.logo}/>
+          </div>
+          <div className={styles.linkHead}>
+            <a href='https://cs50.harvard.edu/certificates/6308ebbe-0551-47c4-a698-ec30cc543875' target='_blank' className={styles.link}>
+              <button>View Certificate</button>
+            </a>
+          </div>
+        </div>
+        </motion.div>
           
         <motion.div
         ref={refCard1}
         initial={{y:-50, opacity:0}}
         animate={IsInViewCard1? {y:0, opacity:1}:{}}
-        transition={{duration:1, delay:0.1}}
+        transition={{duration:1, delay:0.2}}
         >
           <div className={styles.timelineSection}>
           <h2 className={styles.timelineTitle}>June 2025 &#x2014; August 2025</h2>
@@ -63,7 +86,7 @@ function Certifications() {
         ref={refCard2}
         initial={{y:-50, opacity:0}}
         animate={IsInViewCard2? {y:0, opacity:1}:{}}
-        transition={{duration:1, delay:0.2}}
+        transition={{duration:1, delay:0.3}}
         >
           <div className={styles.timelineSection}>
           <h2 className={styles.timelineTitle}>May 2024 &#x2014; July 2024</h2>
