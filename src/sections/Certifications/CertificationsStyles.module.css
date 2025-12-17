@@ -44,7 +44,7 @@
     justify-content: center;
 
     margin-bottom: 12.9px;
-    font-size: 1.6em;
+    font-size: 1.5em;
     margin-top: 0;
 }
 
@@ -65,7 +65,7 @@
     background-color: var(--background-color);
     box-shadow: transparent 0 0 0 1px,var(--shadow-color) 0 6px 20px;
     width: 408.8px;
-    padding: 40px 7px 40px 7px;
+    padding: 40px 2px 40px 2px;
     border-radius: 20px;
     transition: transform 0.5s ease;
     
