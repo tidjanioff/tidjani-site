@@ -47,12 +47,13 @@ function Work() {
               
          
                 <div className={styles.keyFeaturesList}>
-                    <span className={styles.bebold}>&#10551;</span> Designed and developed a full-stack internal web application for managing orders and deliveries.<br></br>
-                    <span className={styles.bebold}>&#10551;</span> Optimized operations with streamlined order & delivery workflows and an interactive Kanban dashboard for real-time status updates. <br></br>
-                    <span className={styles.bebold}>&#10551;</span> Enhanced financial visibility by implementing automated revenue tracking with clear reports by period and payment method.
+                    <div className={styles.keyFeaturesItem}><span className={styles.bebold}>&#8594;</span> Designed and developed a full-stack internal system with <span className={styles.techUsed}>Django</span>, <span className={styles.techUsed}>Javascript</span> and <span className={styles.techUsed}>SQL</span> to manage orders and deliveries<br></br></div>
+                    <div className={styles.keyFeaturesItem}><span className={styles.bebold}>&#8594;</span> Built a Kanban-style dashboard to track order status in real time <br></br></div>
+                    <div className={styles.keyFeaturesItem}><span className={styles.bebold}>&#8594;</span> Implemented an automated accounting module for accurate revenue tracking and reporting <br></br></div>
+                    <div><span className={styles.bebold}>&#8594;</span> Containerized the application with  <span className={styles.techUsed}>Docker</span> to simplify deployment and setup for internal users</div>
                     </div>
               </p><br></br>
-              <p><span className={styles.techUsed}>Django, JavaScript, HTML/CSS, SQL, Docker</span></p><br></br>
+              {/* <p><span className={styles.techUsed}>Django, JavaScript, HTML/CSS, SQL, Docker</span></p><br></br> */}
               
             </div>
               </motion.div>
