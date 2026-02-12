@@ -10,6 +10,9 @@
     --github-background-color: #008894;
     --shadow-color: rgba(18, 18, 18, .1);
     --company-name-color: #000000;
+    --tag-bg: rgb(255, 255, 255);   
+    --tag-border: rgb(255, 255, 255);
+    --tag-text: var(--text-color);
 }
 
 [data-theme = 'dark'] {
@@ -24,6 +27,9 @@
     --github-background-color: #baf9ff;
     --shadow-color: rgba(255, 255, 255, 0.64);
     --company-name-color: #ffffff;
+    --tag-bg: #212121;
+    --tag-border: #212121;
+    --tag-text: var(--text-color);
 }
 
 body {
@@ -93,6 +99,35 @@ li {
     font-weight: 300;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.techStackContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+
+    span {
+        font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+        font-size:11px;
+        font-weight:750;
+        letter-spacing:.3px;
+
+        padding:5px 10px;
+        border-radius:7px;
+
+        background: var(--tag-bg);
+        border: 1px solid var(--tag-border);
+        color: var(--tag-text);
+
+    
+        
+        opacity: .92;
+        user-select:none;
+        margin-bottom: 10px;
+   
+    }
 }
 
 

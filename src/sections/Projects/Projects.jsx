@@ -77,6 +77,7 @@ function Projects() {
                     ldlink="https://youtu.be/OMstUhgU58c"
                     name= "AstraLink"
                     description="Space Launch Tracker"
+                    techStack={["Django", "Python", "JavaScript"]}
                 
                 />
             </motion.div>
@@ -92,7 +93,7 @@ function Projects() {
                     ldlink="https://youtu.be/rdeWqxG-DOU"
                     name= "Homiq"
                     description="Real Estate App"
-                    // techStack="React Native, TypeScript, Expo, NativeWind, Appwrite"
+                    techStack={["React Native", "TypeScript"]}
                 />
             </motion.div>
 
@@ -107,7 +108,7 @@ function Projects() {
                     ldlink="https://youtu.be/c9bU6j-J728"
                     name= "Aurum Arts"
                     description="Art Auction Platform"
-                    // techStack="Django, Python, JavaScript, HTML, CSS, SQLite3"
+                    techStack={["Django", "Python", "JavaScript"]}
                 />
             </motion.div>
             
@@ -122,7 +123,7 @@ function Projects() {
                     ldlink="https://youtu.be/2H3iaNIwPcE"
                     name= "PyroSat"
                     description="Wildfire Tracker"
-                    // techStack="React, JavaScript, HTML, CSS"
+                    techStack={["React", "JavaScript"]}
                 />
             </motion.div>
             <motion.div
@@ -136,6 +137,7 @@ function Projects() {
                     ldlink="https://mystery-boxes.netlify.app/mb"
                     name= "Mystery Boxes™"
                     description="Grid game"
+                    techStack={["Python"]}
                 />
             </motion.div>
             <motion.div
@@ -148,6 +150,7 @@ function Projects() {
                     ldlink="https://youtu.be/k4D-Yvv9-KU"
                     name= "FinTrack"
                     description="Finance Tracker"
+                    techStack={["Python"]}
                 />
             </motion.div>
             <motion.div
@@ -160,6 +163,7 @@ function Projects() {
                     ldlink="https://youtu.be/-JBr8QRUFIU"
                     name= "UMontreal InfoBoard"
                     description="Campus Dashboard"
+                    techStack={["JavaScript", "HTML", "CSS"]}
                 />
             </motion.div>
             <motion.div
@@ -172,6 +176,7 @@ function Projects() {
                     ldlink="https://youtu.be/FESq6M0bwow"
                     name= "Meal Prep Pro"
                     description="Meal Assistant"
+                    techStack={["Python"]}
                 />
             </motion.div>
 

@@ -18,6 +18,8 @@ import github from '../../assets/github.png'
 import nodejs from '../../assets/nodejs.png'
 import figma from '../../assets/figma.png'
 import vscode from '../../assets/vscode.png'
+import php from '../../assets/php.png'
+import vp from '../../assets/vp.png'
 
 
 import docker from '../../assets/docker.png'
@@ -70,11 +72,11 @@ function Skills() {
     const refJavascript = useRef(null)
     const IsInViewJavascript = useInView(refJavascript, {once: true})
 
-    const refHTML = useRef(null)
-    const IsInViewHTML = useInView(refHTML, {once: true})
+    // const refHTML = useRef(null)
+    // const IsInViewHTML = useInView(refHTML, {once: true})
 
-    const refCSS = useRef(null)
-    const IsInViewCSS = useInView(refCSS, {once: true})
+    // const refCSS = useRef(null)
+    // const IsInViewCSS = useInView(refCSS, {once: true})
 
     const refDocker = useRef(null)
     const IsInViewDocker = useInView(refDocker, {once: true})
@@ -88,15 +90,15 @@ function Skills() {
     const refReact = useRef(null)
     const IsInViewReact = useInView(refReact, {once: true})
 
-    const refTailwind = useRef(null)
-    const IsInViewTailwind = useInView(refTailwind, {once: true})
+    // const refTailwind = useRef(null)
+    // const IsInViewTailwind = useInView(refTailwind, {once: true})
 
     const refReactNative = useRef(null)
     const IsInViewReactNative = useInView(refReactNative, {once: true})
     
 
-    const refNodejs = useRef(null)
-    const IsInViewNodejs = useInView(refNodejs, {once: true})
+    // const refNodejs = useRef(null)
+    // const IsInViewNodejs = useInView(refNodejs, {once: true})
 
 
     const refGit = useRef(null)
@@ -104,9 +106,11 @@ function Skills() {
 
     const refGitHub = useRef(null)
     const IsInViewGitHub = useInView(refGitHub, {once: true})
+    const refVP = useRef(null)
+    const IsInViewVP = useInView(refVP, {once: true})
 
-    const refVSCode = useRef(null)
-    const IsInViewVSCode = useInView(refVSCode, {once: true})
+    // const refVSCode = useRef(null)
+    // const IsInViewVSCode = useInView(refVSCode, {once: true})
 
 
 
@@ -118,6 +122,9 @@ function Skills() {
 
     const refTypeScript = useRef(null)
     const IsInViewTypeScript = useInView(refTypeScript, {once: true})
+
+    const refPhp = useRef(null)
+    const IsInViewPhp = useInView(refPhp, {once:true})
 
    
 
@@ -160,7 +167,7 @@ function Skills() {
                 <motion.div 
                 ref={refJavascript}
                 initial={{opacity:0}} animate={IsInViewJavascript?{ opacity:1}: {}}
-                transition={{duration:2, delay:0.2}}
+                transition={{duration:2, delay:0.1}}
                 className={styles.skill}>
                     <img src={javascript}/>
                     <p>JavaScript</p>
@@ -169,15 +176,24 @@ function Skills() {
                 <motion.div 
                 ref={refTypeScript}
                 initial={{opacity:0}} animate={IsInViewTypeScript?{ opacity:1}: {}}
-                transition={{duration:2, delay:0.3}}
+                transition={{duration:2, delay:0.1}}
                 className={styles.skill}>
                     <img src={typescript}/>
                     <p>TypeScript</p>
                 </motion.div>
 
-
-
                 <motion.div 
+                ref={refPhp}
+                initial={{opacity:0}} animate={IsInViewPhp?{ opacity:1}: {}}
+                transition={{duration:2, delay:0.1}}
+                className={styles.skill}>
+                    <img src={php}/>
+                    <p>PHP</p>
+                </motion.div>
+
+
+
+                {/* <motion.div 
                 ref={refHTML}
                 initial={{opacity:0}} animate={IsInViewHTML?{ opacity:1}: {}}
                 transition={{duration:2, delay:0.4}}
@@ -192,11 +208,11 @@ function Skills() {
                 className={styles.skill}>
                     <img src={css3}/>
                     <p>CSS</p>
-                </motion.div>
+                </motion.div> */}
                 <motion.div 
                 ref={refSQL}
                 initial={{opacity:0}} animate={IsInViewSQL?{ opacity:1}:{}}
-                transition={{duration:2, delay:0.6}}
+                transition={{duration:2, delay:0.1}}
                 className={styles.skill}>
                     <img src={sql}/>
                     <p>SQL</p>
@@ -205,7 +221,8 @@ function Skills() {
             <motion.h2
                 ref={refSubTitleFL}
                 initial={{y:-50, opacity:0}} animate={IsInViewSubTitleFL ?{y:0, opacity:1}: {}}
-                transition={{duration:1}}>Frameworks & Libraries</motion.h2>
+                transition={{duration:1}}>Frameworks</motion.h2>
+                {/* & Libraries */}
             <motion.hr
             ref={refSubTitleBRFL}
             initial={{y:-50, opacity:0}} animate={IsInViewSubtitleBRPL?{y:0, opacity:1}:{}}
@@ -229,28 +246,28 @@ function Skills() {
                     <p>React</p>
                 </motion.div>
      
-                <motion.div 
+                {/* <motion.div 
                 ref={refNodejs}
                 initial={{opacity:0}} animate={IsInViewNodejs?{ opacity:1}:{}}
                 transition={{duration:1, delay:0.2}}
                 className={styles.skill}>
                     <img src={nodejs}/>
                     <p>Node.js</p>
-                </motion.div>
+                </motion.div> */}
 
-                <motion.div 
+                {/* <motion.div 
                 ref={refTailwind}
                 initial={{opacity:0}} animate={IsInViewTailwind?{ opacity:1}:{}}
                 transition={{duration:1, delay:0.3}}
                 className={styles.skill}>
                     <img src={tailwind}/>
                     <p>Tailwind CSS</p>
-                </motion.div>
+                </motion.div> */}
 
                  <motion.div 
                 ref={refReactNative}
                 initial={{opacity:0}} animate={IsInViewReactNative?{ opacity:1}:{}}
-                transition={{duration:1, delay:0.4}}
+                transition={{duration:1, delay:0.1}}
                 className={styles.skill}>
                     <img src={reactNative}/>
                     <p>React Native</p>
@@ -260,7 +277,7 @@ function Skills() {
             <motion.h2
                 ref={refSubTitleDT}
                 initial={{y:50, opacity:0}} animate={IsInViewSubTitleDT? {y:0, opacity:1}: {}}
-                transition={{duration:1}}>Development Tools</motion.h2>
+                transition={{duration:1}}>Tools</motion.h2>
             <motion.hr
             ref={refSubTitleBRDT}
             initial={{y:50, opacity:0}} animate={IsInViewSubtitleBRDT? {y:0, opacity:1}: {}}
@@ -287,20 +304,20 @@ function Skills() {
                 <motion.div 
                 ref={refDocker}
                 initial={{opacity:0}} animate={IsInViewDocker? { opacity:1}: {}}
-                transition={{duration:1, delay:0.2}}
+                transition={{duration:1, delay:0.1}}
                 className={styles.skill}>
                     <img src={docker}/>
                     <p>Docker</p>
                 </motion.div>
 
-                <motion.div 
+                {/* <motion.div 
                 ref={refVSCode}
                 initial={{opacity:0}} animate={IsInViewVSCode? { opacity:1}: {}}
                 transition={{duration:1, delay:0.3}}
                 className={styles.skill}>
                     <img src={vscode}/>
                     <p>VS Code</p>
-                </motion.div>
+                </motion.div> */}
  
 
              
@@ -308,7 +325,7 @@ function Skills() {
             <motion.h2
                 ref={refSubTitleDP}
                 initial={{y:-50, opacity:0}} animate={IsInViewSubTitleDP? {y:0, opacity:1}: {}}
-                transition={{duration:1}}>Design & Prototyping</motion.h2>
+                transition={{duration:1}}>Modeling & Prototyping</motion.h2>
             <motion.hr
             ref={refSubTitleBRDP}
             initial={{y:-50, opacity:0}} animate={IsInViewSubtitleBRDP? {y:0, opacity:1}:{}}
@@ -321,6 +338,15 @@ function Skills() {
                 className={styles.skill}>
                     <img src={figma}/>
                     <p>Figma</p>
+                </motion.div>
+
+                <motion.div 
+                ref={refVP}
+                initial={{opacity:0}} animate={IsInViewVP?{ opacity:1}: {}}
+                transition={{duration:1}}
+                className={styles.skill}>
+                    <img src={vp}/>
+                    <p>Visual Paradigm</p>
                 </motion.div>
             </div>
         </div>

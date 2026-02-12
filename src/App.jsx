@@ -13,10 +13,11 @@ function App() {
   return (
   <>
     <Hero/>
+    <About/>
     <Work/>
     <Projects/>
     <Skills/>
-    <About/>
+
     <Certifications/>
     <Contact/> 
     <Footer/>

@@ -55,7 +55,7 @@ function Hero() {
                 transition={{duration:0.6}}
                 style={{
                     marginBottom:'18px',
-                    marginTop:'0px',}}>Aspiring Software Engineer</motion.h2>
+                    marginTop:'0px',}}>Software Engineer</motion.h2>
                 <div className={styles.socials}>
                     <span>
                         <a href='https://www.linkedin.com/in/tidjani-d/' target='_blank'>

@@ -44,9 +44,8 @@ function Certifications() {
         >
           <div className={styles.timelineSection}>
           <h2 className={styles.timelineTitle}>July 2024 &#x2014; December 2025</h2>
-          <h3 className={styles.timelineDescription}>&#128142; Completed CS50W – Web Programming with Python and JavaScript @ Harvard Online</h3>
-          <p> Developed solid web development skills by building full-stack applications with Python and JavaScript. 
-  This experience improved my understanding of backend logic, data persistence, and application structure.
+          <h3 className={styles.timelineDescription}>CS50's Web Programming with Python and JavaScript</h3>
+          <p> Built full-stack applications using Python and JavaScript, strengthening my understanding of backend logic, databases, and web architecture.
             </p>
           <div className={styles.logoHead}>
             <img src={harvard} className={styles.logo}/>
@@ -67,9 +66,8 @@ function Certifications() {
         >
           <div className={styles.timelineSection}>
           <h2 className={styles.timelineTitle}>June 2025 &#x2014; August 2025</h2>
-          <h3 className={styles.timelineDescription}>&#128142; Certified in Foundations of Project Management @ Google</h3>
-          <p>Built a solid grounding in project management by exploring the full project life cycle, from initiation to closure. 
-            Enhanced my skills in setting priorities, coordinating tasks, and communicating clearly with stakeholders.
+          <h3 className={styles.timelineDescription}>Google's Foundations of Project Management</h3>
+          <p>Covered the full project lifecycle, from initiation to closure, strengthening prioritization, task coordination, and stakeholder communication.
             </p>
           <div className={styles.logoHead}>
             <img src={google} className={styles.logo}/>
@@ -90,9 +88,8 @@ function Certifications() {
         >
           <div className={styles.timelineSection}>
           <h2 className={styles.timelineTitle}>May 2024 &#x2014; July 2024</h2>
-          <h3 className={styles.timelineDescription}>&#128142; Completed CS50P – Introduction to Programming with Python @ Harvard Online</h3>
-          <p>Strengthened my programming fundamentals and problem-solving skills by building Python solutions to real-world problems. 
-            Along the way, I also sharpened my algorithmic thinking and wrote clearer, more structured code.
+          <h3 className={styles.timelineDescription}>CS50's Introduction to Programming with Python</h3>
+          <p>Built Python solutions to real-world problems, strengthening my programming and problem-solving foundations.
             </p>
           <div className={styles.logoHead}>
             <img src={harvard} className={styles.logo}/>

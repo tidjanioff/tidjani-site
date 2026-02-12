@@ -16,15 +16,34 @@ function ProjectCard({src, ghlink, ldlink, name, description, techStack}) {
             <img className='hover' src={src} alt={`${name} logo`}/>
         </a>
         <h3>{name}</h3>
-        <p style={{maxWidth: "250px"}}>{description}
-            {/* <br></br> */}
-            {/* <span style={{
-                fontSize:"14px",
-                fontWeight:"bold",
-                // fontStyle:"italic",
-               
-            }}>{techStack}</span> */}
-        </p>
+         <p style={{maxWidth: "250px"}}>{description}</p>
+         {/* <hr style={{
+                  
+                    color: 'var(--text-color)', 
+         
+                   
+            }}></hr> */}
+        <div className='techStackContainer'
+            style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "6px",
+                marginTop: "10px",
+            }}
+            >
+            {techStack.map((tech, index) => (
+                <span
+                key={index}
+                style={{
+   
+                }}
+                >
+                {tech.toUpperCase()}
+                </span>
+            ))}
+            </div>
+            
+       
         <div className="buttons"
             style={{
                 marginTop:'0px',

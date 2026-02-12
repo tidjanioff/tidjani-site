@@ -46,14 +46,14 @@ function About() {
         >
         <div className={styles.timelineSection}>
           <h2 className={styles.timelineTitle}>January 2024 &#x2014; Present</h2>
-          <h3 className={styles.timelineDescription}>&#127891; B.Sc. in Computer Science @ Université de Montréal</h3>
-              <p>Building a strong foundation in computer science through programming, systems, math, and user experience, every course helps me think more like an engineer.  
-This mix of theory and practice is shaping how I approach software: reliable, scalable, and user-focused.
+          <h3 className={styles.timelineDescription}>B.Sc. in Computer Science @ UMontreal</h3>
+              <p>Strengthening my engineering foundations through rigorous coursework in algorithms, data structures, databases, 
+                operating systems, and software design. 
 
               </p>
               <div className={styles.logoHead}>
                 <img src={udem} className={styles.logo}
-                style={{width:155,}}/>
+                style={{width:135,}}/>
               </div>
         </div>
         </motion.div>
@@ -70,10 +70,9 @@ This mix of theory and practice is shaping how I approach software: reliable, sc
                 />
               </div>
           <h2 className={styles.timelineTitle}>TIDJANI D.</h2>
-          <h3 className={styles.timelineDescription}>&#128104;&#127998;&#8205;&#128187; Aspiring Software Engineer</h3>
+          <h3 className={styles.timelineDescription}>Software Engineer</h3>
         
-              <p>Focused on building smart, well-designed, and user-centered solutions, with an academic emphasis on 
-                Software Engineering and Artificial Intelligence, complemented by ongoing training in Project Management.
+              <p>Focused on designing, architecting & building reliable and scalable software systems.
               </p>
               
         </div>
@@ -87,7 +86,7 @@ This mix of theory and practice is shaping how I approach software: reliable, sc
         >
           <div className={styles.timelineSection}>
           <h2 className={styles.timelineTitle}>September 2021 &#x2014; July 2023</h2>
-          <h3 className={styles.timelineDescription}>&#127891; High School Diploma – Mathematics and Physics (S1) @ Cours Sainte Marie de Hann</h3>
+          <h3 className={styles.timelineDescription}>High School Diploma in Maths & Physics <br></br>@ Cours Sainte Marie de Hann</h3>
           <p>Completed a rigorous curriculum in mathematics and physics, which laid the groundwork for logical reasoning and analytical problem-solving.</p>
               <div className={styles.logoHead}>
                 <img src={csmh} className={styles.logo}
