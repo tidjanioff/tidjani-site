@@ -70,7 +70,7 @@ function About() {
                 />
               </div>
           <h2 className={styles.timelineTitle}>TIDJANI D.</h2>
-          <h3 className={styles.timelineDescription}>Software Engineer</h3>
+          <h3 className={styles.timelineDescription}>Software Engineer in Training</h3>
         
               <p>Focused on designing, architecting & building reliable and scalable software systems.
               </p>
