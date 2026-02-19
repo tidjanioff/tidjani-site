@@ -15,6 +15,9 @@ import alLight from '../../assets/astralink-light.png'
 import alDark from '../../assets/astralink-dark.png'
 import psLight from '../../assets/ps-light.png'
 import psDark from '../../assets/ps-dark.png'
+import pickCourseLight from '../../assets/pickcourse-light.png'
+import pickCourseDark from '../../assets/pickcourse-dark.png'
+
 import ProjectCard from '../../common/ProjectCard'
 import {motion, useInView} from "framer-motion"
 import { useRef } from "react"
@@ -27,6 +30,7 @@ function Projects() {
     const aurum = theme === "light" ? aurumlight : aurumdark;
     const ps = theme === "light" ? psLight : psDark;
     const al = theme === "light" ? alLight : alDark;
+    const pc = theme === "light" ? pickCourseLight : pickCourseDark;
     const refTitle = useRef(null);
     const isInViewTitle = useInView(refTitle, {once: true});
 
@@ -55,6 +59,9 @@ function Projects() {
     const refAstraLink = useRef(null);
     const isInViewAstraLink = useInView(refAstraLink, {once: true})
 
+    const refPickCourse = useRef(null);
+    const isInViewPickCourse = useInView(refPickCourse, {once: true})
+
     
     
   return (
@@ -72,6 +79,22 @@ function Projects() {
                 transition={{duration:0.8, delay:0.1}}>
 
                 <ProjectCard 
+                    src={pc} 
+                    ghlink="https://github.com/tidjanioff/pickcourse" 
+                    ldlink="" // video to add later
+                    name= "PickCourse"
+                    description="Course Planning API"
+                    techStack={["Java", "Javalin", "Maven", "JUnit"]}
+                
+                />
+            </motion.div>
+
+                 <motion.div
+                ref={refAstraLink}
+                initial={{opacity:0, y:50}} animate={isInViewAstraLink ? {opacity:1, y:0}:{}}
+                transition={{duration:0.8, delay:0.1}}>
+
+                <ProjectCard 
                     src={al} 
                     ghlink="https://github.com/tidjanioff/astra-link" 
                     ldlink="https://youtu.be/OMstUhgU58c"
@@ -81,6 +104,7 @@ function Projects() {
                 
                 />
             </motion.div>
+            
 
             <motion.div
                 ref={refHq}
