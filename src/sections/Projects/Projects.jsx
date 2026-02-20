@@ -81,10 +81,10 @@ function Projects() {
                 <ProjectCard 
                     src={pc} 
                     ghlink="https://github.com/tidjanioff/pickcourse" 
-                    ldlink="" // video to add later
+                    ldlink="https://youtu.be/AL3vs1haIUE" 
                     name= "PickCourse"
                     description="Course Planning API"
-                    techStack={["Java", "Javalin", "Maven", "JUnit"]}
+                    techStack={["Java", "Javalin", "Maven"]}
                 
                 />
             </motion.div>
