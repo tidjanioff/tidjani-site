@@ -5,6 +5,7 @@ import {motion, useInView} from 'framer-motion'
 import { useRef } from 'react'
 import knbLogoLight from '../../assets/logoKNBlight.png'
 import knbLogoDark from '../../assets/logoKNBdark.png'
+import cadum from '../../assets/CADUM.jpeg'
 
 function Work() {
    const { theme, toggleTheme } = useTheme()
@@ -28,6 +29,62 @@ function Work() {
               marginBottom:'50px',
             }}>Work Experience</motion.h1>
             <div className={styles.timelineContainer}>
+              <motion.div
+              ref={refCard1}
+            initial={{y:-50, opacity:0}}
+            animate={IsInViewCard1? {y:0, opacity:1}: {}}
+            transition={{duration:1}}>
+                <div 
+            className={styles.timelineSection}>
+              <h2 className={styles.timelineTitle}>Mobile Application Developer</h2>
+              <h2 className={styles.periodTitle}>NOVEMBER 2025 &#x2014; PRESENT</h2>
+             
+              <div className={styles.logoHead}>
+                              <img src={cadum} className={styles.logo}
+                              style={{
+                                width:83,
+                                marginBottom:17,
+                                marginTop:0.5,
+                                }}/>
+                            </div>
+              
+              <p>
+              
+         
+                <div className={styles.keyFeaturesList}>
+                   <div className={styles.keyFeaturesItem}>
+                    <span className={styles.bebold}>&#8594;</span> 
+                    &nbsp;Contributing to the development of mobile applications using 
+                    <span className={styles.techUsed}> React Native </span> 
+                    and 
+                    <span className={styles.techUsed}> TypeScript </span>
+                    <br></br>
+                  </div>
+
+                 <div className={styles.keyFeaturesItem}>
+                  <span className={styles.bebold}>&#8594;</span> 
+                  &nbsp;Currently working on <span className={styles.techUsed}>StudyBuddy</span>, a student productivity mobile app
+                  <br></br>
+                </div>
+
+                  <div className={styles.keyFeaturesItem}>
+                    <span className={styles.bebold}>&#8594;</span> 
+                    &nbsp;Implementing and refining user interface components and application features 
+                    <br></br>
+                  </div>
+
+                  <div>
+                    <span className={styles.bebold}>&#8594;</span> 
+                    &nbsp;Collaborating with a team of student developers on ongoing mobile projects
+                  </div>
+
+              </div>
+              </p><br></br>
+              {/* <p><span className={styles.techUsed}>Django, JavaScript, HTML/CSS, SQL, Docker</span></p><br></br> */}
+              
+            </div>
+              </motion.div>
+
               <motion.div
               ref={refCard1}
             initial={{y:-50, opacity:0}}
