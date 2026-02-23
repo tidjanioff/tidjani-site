@@ -18,6 +18,9 @@ import psDark from '../../assets/ps-dark.png'
 import pickCourseLight from '../../assets/pickcourse-light.png'
 import pickCourseDark from '../../assets/pickcourse-dark.png'
 
+import letsTravelLight from '../../assets/letsTravel-light.png'
+import letsTravelDark from '../../assets/letsTravel-dark.png'
+
 import ProjectCard from '../../common/ProjectCard'
 import {motion, useInView} from "framer-motion"
 import { useRef } from "react"
@@ -31,6 +34,8 @@ function Projects() {
     const ps = theme === "light" ? psLight : psDark;
     const al = theme === "light" ? alLight : alDark;
     const pc = theme === "light" ? pickCourseLight : pickCourseDark;
+    const letsTravelImage = theme === "light" ? letsTravelLight : letsTravelDark;
+
     const refTitle = useRef(null);
     const isInViewTitle = useInView(refTitle, {once: true});
 
@@ -62,7 +67,8 @@ function Projects() {
     const refPickCourse = useRef(null);
     const isInViewPickCourse = useInView(refPickCourse, {once: true})
 
-    
+    const refLetsTravel = useRef(null);
+    const isInViewLetsTravel = useInView(refLetsTravel, {once: true})
     
   return (
     <section id='projects' className={styles.container}>
@@ -74,8 +80,8 @@ function Projects() {
         
         <div className={styles.projectContainer}>
             <motion.div
-                ref={refAstraLink}
-                initial={{opacity:0, y:50}} animate={isInViewAstraLink ? {opacity:1, y:0}:{}}
+                ref={refPickCourse}
+                initial={{opacity:0, y:50}} animate={isInViewPickCourse ? {opacity:1, y:0}:{}}
                 transition={{duration:0.8, delay:0.1}}>
 
                 <ProjectCard 
@@ -89,7 +95,23 @@ function Projects() {
                 />
             </motion.div>
 
-                 <motion.div
+             <motion.div
+                ref={refLetsTravel}
+                initial={{opacity:0, y:50}} animate={isInViewLetsTravel ? {opacity:1, y:0}:{}}
+                transition={{duration:0.8, delay:0.1}}>
+
+                <ProjectCard 
+                    src={letsTravelImage} 
+                    ghlink="https://github.com/tidjanioff/lets-travel" 
+                    ldlink="" // video to add later
+                    name= "Let's Travel"
+                    description="Travel Sharing Platform"
+                    techStack={["PHP", "MySQL", "JavaScript"]}
+                
+                />
+            </motion.div>
+
+             <motion.div
                 ref={refAstraLink}
                 initial={{opacity:0, y:50}} animate={isInViewAstraLink ? {opacity:1, y:0}:{}}
                 transition={{duration:0.8, delay:0.1}}>
@@ -104,6 +126,8 @@ function Projects() {
                 
                 />
             </motion.div>
+
+                
             
 
             <motion.div
