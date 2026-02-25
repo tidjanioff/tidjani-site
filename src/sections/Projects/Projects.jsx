@@ -103,7 +103,7 @@ function Projects() {
                 <ProjectCard 
                     src={letsTravelImage} 
                     ghlink="https://github.com/tidjanioff/lets-travel" 
-                    ldlink="" // video to add later
+                    ldlink="https://youtu.be/h0ui7KYfLW4" 
                     name= "Let's Travel"
                     description="Travel Sharing Platform"
                     techStack={["PHP", "MySQL", "JavaScript"]}
