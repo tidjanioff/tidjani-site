@@ -6,6 +6,7 @@ import { useRef } from 'react'
 import knbLogoLight from '../../assets/logoKNBlight.png'
 import knbLogoDark from '../../assets/logoKNBdark.png'
 import cadum from '../../assets/CADUM.jpeg'
+import umontreal from '../../assets/umontreal.png'
 
 function Work() {
    const { theme, toggleTheme } = useTheme()
@@ -63,7 +64,7 @@ function Work() {
 
                  <div className={styles.keyFeaturesItem}>
                   <span className={styles.bebold}>&#8594;</span> 
-                  &nbsp;Currently working on <span className={styles.techUsed}>StudyBuddy</span>, a student productivity mobile app
+                  &nbsp;Currently working on <span className={styles.techUsed}>StudyBuddy</span>, a student productivity app
                   <br></br>
                 </div>
 
@@ -79,6 +80,67 @@ function Work() {
                   </div>
 
               </div>
+              </p><br></br>
+              {/* <p><span className={styles.techUsed}>Django, JavaScript, HTML/CSS, SQL, Docker</span></p><br></br> */}
+              
+            </div>
+              </motion.div>
+
+              <motion.div
+              ref={refCard1}
+            initial={{y:-50, opacity:0}}
+            animate={IsInViewCard1? {y:0, opacity:1}: {}}
+            transition={{duration:1}}>
+                <div 
+            className={styles.timelineSection}>
+              <h2 className={styles.timelineTitle}>Web Developer</h2>
+              <h2 className={styles.periodTitle}>SEPTEMBER 2025 &#x2014; PRESENT</h2>
+             
+              <div className={styles.logoHead}>
+                              <img src={umontreal} className={styles.logo}
+                              style={{
+                                width:83,
+                                marginBottom:17,
+                                marginTop:0.5,
+                                }}/>
+                            </div>
+              
+              <p>
+              
+         
+                <div className={styles.keyFeaturesList}>
+
+                  <div className={styles.keyFeaturesItem}>
+                    <span className={styles.bebold}>&#8594;</span> 
+                    &nbsp;Designing and developing the official website of the 
+                    <span className={styles.techUsed}> Veo Project </span> 
+                    at the 
+                    <span className={styles.techUsed}> Cercle Vinci </span>
+                    <br></br>
+                  </div>
+
+                  <div className={styles.keyFeaturesItem}>
+                    <span className={styles.bebold}>&#8594;</span> 
+                    &nbsp;Building web interfaces using 
+                    <span className={styles.techUsed}> HTML </span>, 
+                    <span className={styles.techUsed}> CSS </span> 
+                    and 
+                    <span className={styles.techUsed}> JavaScript </span>
+                    <br></br>
+                  </div>
+
+                  <div className={styles.keyFeaturesItem}>
+                    <span className={styles.bebold}>&#8594;</span> 
+                    &nbsp;Implementing responsive layouts and interactive UI components
+                    <br></br>
+                  </div>
+
+                  <div>
+                    <span className={styles.bebold}>&#8594;</span> 
+                    &nbsp;Collaborating with researchers and students to publish project resources, research findings and documentation online
+                  </div>
+
+                </div>
               </p><br></br>
               {/* <p><span className={styles.techUsed}>Django, JavaScript, HTML/CSS, SQL, Docker</span></p><br></br> */}
               
