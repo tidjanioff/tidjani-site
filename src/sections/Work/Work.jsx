@@ -16,6 +16,12 @@ function Work() {
    
      const refCard1 = useRef(null);
      const IsInViewCard1 = useInView(refCard1, {once:true})
+
+     const refCard2 = useRef(null);
+     const IsInViewCard2 = useInView(refCard1, {once:true})
+
+      const refCard3 = useRef(null);
+     const IsInViewCard3 = useInView(refCard1, {once:true})
    
     const knbLogo = theme === "light" ? knbLogoLight : knbLogoDark;
      
@@ -30,10 +36,14 @@ function Work() {
               marginBottom:'50px',
             }}>Work Experience</motion.h1>
             <div className={styles.timelineContainer}>
+
+        
+
+
               <motion.div
-              ref={refCard1}
+              ref={refCard2}
             initial={{y:-50, opacity:0}}
-            animate={IsInViewCard1? {y:0, opacity:1}: {}}
+            animate={IsInViewCard2? {y:0, opacity:1}: {}}
             transition={{duration:1}}>
                 <div 
             className={styles.timelineSection}>
@@ -86,7 +96,7 @@ function Work() {
             </div>
               </motion.div>
 
-              <motion.div
+                               <motion.div
               ref={refCard1}
             initial={{y:-50, opacity:0}}
             animate={IsInViewCard1? {y:0, opacity:1}: {}}
@@ -147,10 +157,12 @@ function Work() {
             </div>
               </motion.div>
 
+ 
+
               <motion.div
-              ref={refCard1}
+              ref={refCard3}
             initial={{y:-50, opacity:0}}
-            animate={IsInViewCard1? {y:0, opacity:1}: {}}
+            animate={IsInViewCard3? {y:0, opacity:1}: {}}
             transition={{duration:1}}>
                 <div 
             className={styles.timelineSection}>
