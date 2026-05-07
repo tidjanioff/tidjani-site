@@ -86,7 +86,7 @@ function Hero() {
                 initial={{opacity:0, y:30}} animate={{opacity:1, y:0}}
                 transition={{duration:0.6}}
                 className={styles.description}>
-                I build some tech stuff.
+                Based in Montreal, building real software that improves people's lives. 
                 </motion.p>
                 <a href="mailto:tidjanioff@gmail.com">
                     <motion.button 

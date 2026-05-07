@@ -103,7 +103,7 @@ function Work() {
             transition={{duration:1}}>
                 <div 
             className={styles.timelineSection}>
-              <h2 className={styles.timelineTitle}>Web Developer</h2>
+              <h2 className={styles.timelineTitle}>Software Developer</h2>
               <h2 className={styles.periodTitle}>SEPTEMBER 2025 &#x2014; PRESENT</h2>
              
               <div className={styles.logoHead}>
@@ -120,37 +120,41 @@ function Work() {
          
                 <div className={styles.keyFeaturesList}>
 
-                  <div className={styles.keyFeaturesItem}>
-                    <span className={styles.bebold}>&#8594;</span> 
-                    &nbsp;Designing and developing the official website of the 
-                    <span className={styles.techUsed}> Veo Project </span> 
-                    at the 
-                    <span className={styles.techUsed}> Cercle Vinci </span>
-                    <br></br>
-                  </div>
+  <div className={styles.keyFeaturesItem}>
+    <span className={styles.bebold}>&#8594;</span> 
+    &nbsp;Contributing to the software development of the 
+    <span className={styles.techUsed}> Veo Project</span>, 
+    a Cercle Vinci initiative developing artificial retina technology for visually impaired individuals
+    <br></br>
+  </div>
 
-                  <div className={styles.keyFeaturesItem}>
-                    <span className={styles.bebold}>&#8594;</span> 
-                    &nbsp;Building web interfaces using 
-                    <span className={styles.techUsed}> HTML </span>, 
-                    <span className={styles.techUsed}> CSS </span> 
-                    and 
-                    <span className={styles.techUsed}> JavaScript </span>
-                    <br></br>
-                  </div>
+  <div className={styles.keyFeaturesItem}>
+    <span className={styles.bebold}>&#8594;</span> 
+    &nbsp;Working on image processing and tactile mapping logic using 
+    <span className={styles.techUsed}> Python</span>, 
+    <span className={styles.techUsed}> OpenCV</span>, 
+    <span className={styles.techUsed}> NumPy </span> 
+    and 
+    <span className={styles.techUsed}> Matplotlib </span>
+    <br></br>
+  </div>
 
-                  <div className={styles.keyFeaturesItem}>
-                    <span className={styles.bebold}>&#8594;</span> 
-                    &nbsp;Implementing responsive layouts and interactive UI components
-                    <br></br>
-                  </div>
+  <div className={styles.keyFeaturesItem}>
+    <span className={styles.bebold}>&#8594;</span> 
+    &nbsp;Designing and developing the project’s official website using 
+    <span className={styles.techUsed}> HTML</span>, 
+    <span className={styles.techUsed}> CSS </span> 
+    and 
+    <span className={styles.techUsed}> JavaScript </span>
+    <br></br>
+  </div>
 
-                  <div>
-                    <span className={styles.bebold}>&#8594;</span> 
-                    &nbsp;Collaborating with researchers and students to publish project resources, research findings and documentation online
-                  </div>
+  <div>
+    <span className={styles.bebold}>&#8594;</span> 
+    &nbsp;Implementing responsive layouts and interactive web interfaces for research and project presentation
+  </div>
 
-                </div>
+</div>
               </p><br></br>
               {/* <p><span className={styles.techUsed}>Django, JavaScript, HTML/CSS, SQL, Docker</span></p><br></br> */}
               
