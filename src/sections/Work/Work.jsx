@@ -1,203 +1,139 @@
-import React from 'react'
+import { useState } from 'react'
+import { AnimatePresence, motion as Motion } from 'framer-motion'
 import styles from './WorkStyles.module.css'
-import { useTheme } from '../../common/ThemeContext'
-import {motion, useInView} from 'framer-motion'
-import { useRef } from 'react'
-import knbLogoLight from '../../assets/logoKNBlight.png'
-import knbLogoDark from '../../assets/logoKNBdark.png'
-import cadum from '../../assets/CADUM.jpeg'
-import umontreal from '../../assets/umontreal.png'
+
+const experiences = [
+  {
+    organization: 'KNB Food',
+    role: 'Software Engineer Intern',
+    period: 'May 2025 — August 2025',
+    bullets: [
+      'Designed and developed a full-stack internal system with Django, JavaScript, and SQL to manage orders and deliveries.',
+      'Built a Kanban-style dashboard to track order status in real time.',
+      'Implemented an automated accounting module for accurate revenue tracking and reporting.',
+      'Containerized the application with Docker to simplify deployment and setup for internal users.',
+    ],
+    technologies: ['Django', 'JavaScript', 'SQL', 'Docker'],
+  },
+  {
+    organization: 'CADUM',
+    role: 'Mobile Application Developer',
+    period: 'November 2025 — Present',
+    bullets: [
+      'Developing cross-platform mobile applications using React Native and TypeScript.',
+      'Contributing to the development of StudyBuddy, a productivity app designed for university students.',
+      'Designing and implementing features for Pomodoro-based study sessions, academic goal tracking, GPA calculation, and exam revision planning.',
+      'Collaborating with a team of student developers throughout the development lifecycle.',
+    ],
+    technologies: ['React Native', 'TypeScript', 'StudyBuddy'],
+  },
+  {
+    organization: 'Cercle Vinci',
+    role: 'Software Developer Lead',
+    period: 'September 2025 — Present',
+    bullets: [
+      'Contributing to the software development of the Veo Project, a research initiative developing artificial retina technology for visually impaired people.',
+      'Working on image processing and tactile mapping logic using Python.',
+      'Leading the development of the project’s official website.',
+      'Implementing responsive layouts and interactive web interfaces to support project presentation using HTML, CSS, and JavaScript.',
+    ],
+    technologies: ['Veo Project', 'Python', 'HTML', 'CSS', 'JavaScript'],
+  },
+]
+
+function highlightTechnologies(text, technologies) {
+  const pattern = new RegExp(`(${technologies.join('|')})`, 'g')
+
+  return text.split(pattern).map((part, index) =>
+    technologies.includes(part) ? (
+      <strong key={`${part}-${index}`} className={styles.technology}>
+        {part}
+      </strong>
+    ) : (
+      part
+    ),
+  )
+}
 
 function Work() {
-   const { theme, toggleTheme } = useTheme()
-   
-     const refTitle = useRef(null);
-     const IsInViewTitle = useInView(refTitle, {once:true})
-   
-     const refCard1 = useRef(null);
-     const IsInViewCard1 = useInView(refCard1, {once:true})
+  const [activeIndex, setActiveIndex] = useState(0)
+  const activeExperience = experiences[activeIndex]
 
-     const refCard2 = useRef(null);
-     const IsInViewCard2 = useInView(refCard1, {once:true})
+  const handleTabKeyDown = (event) => {
+    if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) {
+      return
+    }
 
-      const refCard3 = useRef(null);
-     const IsInViewCard3 = useInView(refCard1, {once:true})
-   
-    const knbLogo = theme === "light" ? knbLogoLight : knbLogoDark;
-     
+    event.preventDefault()
+    const direction = ['ArrowRight', 'ArrowDown'].includes(event.key) ? 1 : -1
+    const nextIndex = (activeIndex + direction + experiences.length) % experiences.length
+    setActiveIndex(nextIndex)
+    document.getElementById(`experience-tab-${nextIndex}`)?.focus()
+  }
 
   return (
-    <section id='work'>
-            <motion.h1
-            ref={refTitle}
-            initial={{y:-50}} animate={IsInViewTitle?{ y:0}:{}}
-            transition={{duration:1}}
-            style={{
-              marginBottom:'50px',
-            }}>Work Experience</motion.h1>
-            <div className={styles.timelineContainer}>
+    <Motion.section
+      id="work"
+      className={styles.work}
+      initial={{ opacity: 0, y: 32 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.65, ease: 'easeOut' }}
+    >
+      <div className={styles.heading}>
+        <h1><span>/&nbsp;</span> experience</h1>
+        <div className={styles.headingLine} aria-hidden="true" />
+      </div>
 
-        
+      <div className={styles.experienceLayout}>
+        <div className={styles.tabs} role="tablist" aria-label="Work experience">
+          {experiences.map((experience, index) => (
+            <button
+              key={experience.organization}
+              id={`experience-tab-${index}`}
+              className={`${styles.tab} ${index === activeIndex ? styles.activeTab : ''}`}
+              type="button"
+              role="tab"
+              aria-selected={index === activeIndex}
+              aria-controls={`experience-panel-${index}`}
+              tabIndex={index === activeIndex ? 0 : -1}
+              onClick={() => setActiveIndex(index)}
+              onKeyDown={handleTabKeyDown}
+            >
+              {experience.organization}
+            </button>
+          ))}
+        </div>
 
+        <AnimatePresence mode="wait">
+          <Motion.article
+            key={activeExperience.organization}
+            id={`experience-panel-${activeIndex}`}
+            className={styles.details}
+            role="tabpanel"
+            aria-labelledby={`experience-tab-${activeIndex}`}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.25, ease: 'easeOut' }}
+          >
+            <h2 className={styles.roleTitle}>
+              {activeExperience.role}{' '}
+              &nbsp;<span>@ {activeExperience.organization}</span>
+            </h2>
+            <p className={styles.period}>{activeExperience.period}</p>
 
-              <motion.div
-              ref={refCard2}
-            initial={{y:-50, opacity:0}}
-            animate={IsInViewCard2? {y:0, opacity:1}: {}}
-            transition={{duration:1}}>
-                <div 
-            className={styles.timelineSection}>
-              <h2 className={styles.timelineTitle}>Mobile Application Developer</h2>
-              <h2 className={styles.periodTitle}>NOVEMBER 2025 &#x2014; PRESENT</h2>
-             
-              <div className={styles.logoHead}>
-                              <img src={cadum} className={styles.logo}
-                              style={{
-                                width:83,
-                                marginBottom:17,
-                                marginTop:0.5,
-                                }}/>
-                            </div>
-              
-              <p>
-              
-         
-                <div className={styles.keyFeaturesList}>
-                   <div className={styles.keyFeaturesItem}>
-                    <span className={styles.bebold}>&#8594;</span> 
-                    &nbsp;Contributing to the development of mobile applications using 
-                    <span className={styles.techUsed}> React Native </span> 
-                    and 
-                    <span className={styles.techUsed}> TypeScript </span>
-                    <br></br>
-                  </div>
-
-                 <div className={styles.keyFeaturesItem}>
-                  <span className={styles.bebold}>&#8594;</span> 
-                  &nbsp;Currently working on <span className={styles.techUsed}>StudyBuddy</span>, a student productivity app
-                  <br></br>
-                </div>
-
-                  <div className={styles.keyFeaturesItem}>
-                    <span className={styles.bebold}>&#8594;</span> 
-                    &nbsp;Implementing and refining user interface components and application features 
-                    <br></br>
-                  </div>
-
-                  <div>
-                    <span className={styles.bebold}>&#8594;</span> 
-                    &nbsp;Collaborating with a team of student developers on ongoing mobile projects
-                  </div>
-
-              </div>
-              </p><br></br>
-              {/* <p><span className={styles.techUsed}>Django, JavaScript, HTML/CSS, SQL, Docker</span></p><br></br> */}
-              
-            </div>
-              </motion.div>
-
-                               <motion.div
-              ref={refCard1}
-            initial={{y:-50, opacity:0}}
-            animate={IsInViewCard1? {y:0, opacity:1}: {}}
-            transition={{duration:1}}>
-                <div 
-            className={styles.timelineSection}>
-              <h2 className={styles.timelineTitle}>Software Developer</h2>
-              <h2 className={styles.periodTitle}>SEPTEMBER 2025 &#x2014; PRESENT</h2>
-             
-              <div className={styles.logoHead}>
-                              <img src={umontreal} className={styles.logo}
-                              style={{
-                                width:83,
-                                marginBottom:17,
-                                marginTop:0.5,
-                                }}/>
-                            </div>
-              
-              <p>
-              
-         
-                <div className={styles.keyFeaturesList}>
-
-  <div className={styles.keyFeaturesItem}>
-    <span className={styles.bebold}>&#8594;</span> 
-    &nbsp;Contributing to the software development of the 
-    <span className={styles.techUsed}> Veo Project</span>, 
-    a Cercle Vinci initiative developing artificial retina technology for visually impaired individuals
-    <br></br>
-  </div>
-
-  <div className={styles.keyFeaturesItem}>
-    <span className={styles.bebold}>&#8594;</span> 
-    &nbsp;Working on image processing and tactile mapping logic using 
-    <span className={styles.techUsed}> Python</span>, 
-    <span className={styles.techUsed}> OpenCV</span>, 
-    <span className={styles.techUsed}> NumPy </span> 
-    and 
-    <span className={styles.techUsed}> Matplotlib </span>
-    <br></br>
-  </div>
-
-  <div className={styles.keyFeaturesItem}>
-    <span className={styles.bebold}>&#8594;</span> 
-    &nbsp;Designing and developing the project’s official website using 
-    <span className={styles.techUsed}> HTML</span>, 
-    <span className={styles.techUsed}> CSS </span> 
-    and 
-    <span className={styles.techUsed}> JavaScript </span>
-    <br></br>
-  </div>
-
-  <div>
-    <span className={styles.bebold}>&#8594;</span> 
-    &nbsp;Implementing responsive layouts and interactive web interfaces for research and project presentation
-  </div>
-
-</div>
-              </p><br></br>
-              {/* <p><span className={styles.techUsed}>Django, JavaScript, HTML/CSS, SQL, Docker</span></p><br></br> */}
-              
-            </div>
-              </motion.div>
-
- 
-
-              <motion.div
-              ref={refCard3}
-            initial={{y:-50, opacity:0}}
-            animate={IsInViewCard3? {y:0, opacity:1}: {}}
-            transition={{duration:1}}>
-                <div 
-            className={styles.timelineSection}>
-              <h2 className={styles.timelineTitle}>Software Engineer Intern</h2>
-              <h2 className={styles.periodTitle}>MAY 2025 &#x2014; AUGUST 2025</h2>
-             
-              <div className={styles.logoHead}>
-                              <img src={knbLogo} className={styles.logo}
-                              style={{width:120,}}/>
-                            </div>
-              
-              <p>
-              
-         
-                <div className={styles.keyFeaturesList}>
-                    <div className={styles.keyFeaturesItem}><span className={styles.bebold}>&#8594;</span> Designed and developed a full-stack internal system with <span className={styles.techUsed}>Django</span>, <span className={styles.techUsed}>Javascript</span> and <span className={styles.techUsed}>SQL</span> to manage orders and deliveries<br></br></div>
-                    <div className={styles.keyFeaturesItem}><span className={styles.bebold}>&#8594;</span> Built a Kanban-style dashboard to track order status in real time <br></br></div>
-                    <div className={styles.keyFeaturesItem}><span className={styles.bebold}>&#8594;</span> Implemented an automated accounting module for accurate revenue tracking and reporting <br></br></div>
-                    <div><span className={styles.bebold}>&#8594;</span> Containerized the application with  <span className={styles.techUsed}>Docker</span> to simplify deployment and setup for internal users</div>
-                    </div>
-              </p><br></br>
-              {/* <p><span className={styles.techUsed}>Django, JavaScript, HTML/CSS, SQL, Docker</span></p><br></br> */}
-              
-            </div>
-              </motion.div>
-     
-         
-            
-            
-            </div>
-        </section>
+            <ul className={styles.description}>
+              {activeExperience.bullets.map((bullet) => (
+                <li key={bullet}>
+                  {highlightTechnologies(bullet, activeExperience.technologies)}
+                </li>
+              ))}
+            </ul>
+          </Motion.article>
+        </AnimatePresence>
+      </div>
+    </Motion.section>
   )
 }
 

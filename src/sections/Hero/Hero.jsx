@@ -86,7 +86,7 @@ function Hero() {
                 initial={{opacity:0, y:30}} animate={{opacity:1, y:0}}
                 transition={{duration:0.6}}
                 className={styles.description}>
-                Based in Montreal, building real software that improves people's lives. 
+                Based in Canada, building software that solves real-world problems. 
                 </motion.p>
                 <a href="mailto:tidjanioff@gmail.com">
                     <motion.button 

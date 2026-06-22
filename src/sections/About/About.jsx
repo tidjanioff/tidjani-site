@@ -1,102 +1,70 @@
-import React from 'react'
-import styles from './AboutStyles.module.css'
-import udemLight from '../../assets/udem-light.png'
-import udemDark from '../../assets/udem-dark.png'
-import csmh from '../../assets/csmh.png'
+import { motion as Motion } from 'framer-motion'
 import tidjani from '../../assets/tidjani.jpg'
-import { useTheme } from '../../common/ThemeContext'
-import {motion, useInView} from 'framer-motion'
-import { useRef } from 'react'
+import styles from './AboutStyles.module.css'
+
+const technologies = [
+  'Java',
+  'C# / .NET',
+  'Python',
+  'JavaScript',
+  'TypeScript',
+  'Django',
+  'React.js',
+  'React Native',
+  
+  ,
+]
 
 function About() {
-  const { theme, toggleTheme } = useTheme()
-
-  const refTitle = useRef(null);
-  const IsInViewTitle = useInView(refTitle, {once:true})
-
-  const refCard1 = useRef(null);
-  const IsInViewCard1 = useInView(refCard1, {once:true})
-
-  const refCard2 = useRef(null);
-  const IsInViewCard2 = useInView(refCard2, {once:true})
-
-  const refCard3 = useRef(null);
-  const IsInViewCard3 = useInView(refCard3, {once:true})
-
-  const refCard4 = useRef(null);
-  const IsInViewCard4 = useInView(refCard4, {once:true})
-  
-  const udem = theme === "light" ? udemLight : udemDark;
   return (
-    <section id='about'>
-        <motion.h1
-        ref={refTitle}
-        initial={{y:-50}} animate={IsInViewTitle?{ y:0}:{}}
-        transition={{duration:1}}
-        style={{
-          marginBottom:'50px',
-        }}>About Me</motion.h1>
-        <div className={styles.timelineContainer}>
-          
-        <motion.div
-        ref={refCard2}
-        initial={{y:-100, opacity:0}}
-        animate={IsInViewCard2?{y:0, opacity:1}:{}}
-        transition={{duration:1, delay:0.1}}
-        >
-        <div className={styles.timelineSection}>
-          <h2 className={styles.timelineTitle}>January 2024 &#x2014; Present</h2>
-          <h3 className={styles.timelineDescription}>B.Sc. in Computer Science @ UMontreal</h3>
-              <p>Strengthening my engineering foundations through rigorous coursework in algorithms, data structures, databases, 
-                operating systems, and software design. 
+    <Motion.section
+      id="about"
+      className={styles.about}
+      initial={{ opacity: 0, y: 36 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.7, ease: 'easeOut' }}
+    >
+      <div className={styles.heading}>
+        <h1><span>/&nbsp;</span> about me</h1>
+        <div className={styles.headingLine} aria-hidden="true" />
+      </div>
 
-              </p>
-              <div className={styles.logoHead}>
-                <img src={udem} className={styles.logo}
-                style={{width:135,}}/>
-              </div>
-        </div>
-        </motion.div>
+      <div className={styles.content}>
+        <div className={styles.copy}>
+          <p>
+            I’m <strong>Tidjani</strong>, a Software Developer and CS student at <strong>Université de Montréal</strong>, working toward a career in Software Engineering and 
+            building software that solves real-world problems.
+          </p>
 
-        <motion.div
-        ref={refCard2}
-        initial={{opacity:0}}
-        animate={IsInViewCard2?{opacity:1}:{}}
-        transition={{duration:0.8, delay:0.1}}
-        >
-        <div className={styles.timelineSection}>
-            <div className={styles.logoHead}>
-                <img src={tidjani} className={styles.tidjani}
-                />
-              </div>
-          <h2 className={styles.timelineTitle}>TIDJANI D.</h2>
-          <h3 className={styles.timelineDescription}>Software Developer</h3>
-        
-              <p>Focused on designing, architecting & building reliable and scalable software systems.
-              </p>
-              
-        </div>
-        </motion.div>
+          <p>
+            My work focuses on backend engineering, software systems, and I'm currently expanding into AI integration and software tooling. 
+            My main focus right now is <strong>Rekat</strong>, a plug-in developed in collaboration with <strong>BPA</strong> to improve interoperability between BIM models and Wi-Fi 
+            planning workflows, making the exchange between Autodesk Revit and Ekahau AI Pro more reliable, maintainable, and usable in real-world engineering contexts.
+          </p>
 
-        <motion.div
-        ref={refCard4}
-         initial={{y:100, opacity:0}}
-        animate={IsInViewCard4? {y:0, opacity:1}:{}}
-        transition={{duration:0.8, delay:0.1}}
-        >
-          <div className={styles.timelineSection}>
-          <h2 className={styles.timelineTitle}>September 2021 &#x2014; July 2023</h2>
-          <h3 className={styles.timelineDescription}>High School Diploma in Maths & Physics <br></br>@ Cours Sainte Marie de Hann</h3>
-          <p>Completed a rigorous curriculum in mathematics and physics, which laid the groundwork for logical reasoning and analytical problem-solving.</p>
-              <div className={styles.logoHead}>
-                <img src={csmh} className={styles.logo}
-                />
-              </div>
+          <p>Here are some technologies I’ve been working with:</p>
+
+          <ul className={styles.technologies}>
+            {technologies.map((technology) => (
+              <li key={technology}>{technology}</li>
+            ))}
+          </ul>
+
+          <p>
+            Outside of software, I create YouTube content where I share thoughts on technology, learning, and the way digital tools influence our daily lives.
+          </p>
         </div>
-        </motion.div>
-        
+
+        <div className={styles.portraitWrapper}>
+          <img
+            className={styles.portrait}
+            src={tidjani}
+            alt="Tidjani Diop"
+          />
         </div>
-    </section>
+      </div>
+    </Motion.section>
   )
 }
 
