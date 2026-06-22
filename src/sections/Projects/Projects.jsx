@@ -1,6 +1,6 @@
 import { motion as Motion } from 'framer-motion'
 import astralinkPreview from '../../assets/astralink-preview.png'
-import cadencePreview from '../../assets/cadence-preview.png'
+import cadencePreview from '../../assets/schedule.png'
 import styles from './ProjectsStyles.module.css'
 
 const projects = [
