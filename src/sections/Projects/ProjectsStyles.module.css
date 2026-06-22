@@ -279,6 +279,41 @@
     padding: 30px;
     background: linear-gradient(145deg, #151820, #0d0f14);
   }
+
+  :global([data-theme='light']) .content {
+    background: var(--project-card-bg);
+  }
+
+  :global([data-theme='light']) .content h2,
+  :global([data-theme='light']) .content h3,
+  :global([data-theme='light']) .description {
+    color: var(--text-color);
+    text-shadow: none;
+  }
+
+  :global([data-theme='light']) .projectTitle,
+  :global([data-theme='light']) .technologies li {
+    color: var(--github-background-color);
+  }
+
+  :global([data-theme='light']) .technologies li {
+    background-color: color-mix(in srgb, var(--github-background-color) 10%, transparent);
+  }
+
+  :global([data-theme='light']) .links a {
+    border-color: color-mix(in srgb, var(--text-color) 28%, transparent);
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(18, 18, 18, 0.08);
+    color: var(--text-color);
+    backdrop-filter: none;
+  }
+
+  :global([data-theme='light']) .links a:hover,
+  :global([data-theme='light']) .links a:focus-visible {
+    border-color: var(--project-action-hover-color);
+    background-color: var(--project-action-hover-color);
+    color: #071014;
+  }
 }
 
 @media (max-width: 480px) {
