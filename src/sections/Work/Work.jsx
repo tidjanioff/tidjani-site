@@ -4,6 +4,17 @@ import styles from './WorkStyles.module.css'
 
 const experiences = [
   {
+    organization: 'BPA',
+    role: 'Software Developer',
+    period: 'May 2026 — Present',
+    bullets: [
+      'Developing Rekat, an Autodesk Revit plug-in developed in C#/.NET to improve interoperability between BIM models and Wi-Fi planning projects built in Ekahau AI Pro.',
+      'Working on the Ekahau-to-Revit import pipeline, focusing on data parsing, version compatibility checks, error handling, and reliability improvements.',
+      'Designing and improving the plug-in\'s UI/UX with WPF to make import/export workflows clearer and easier to use in professional engineering contexts.',
+    ],
+    technologies: ['Rekat', 'Autodesk Revit', 'C#/.NET', 'C#', '.NET', 'Ekahau AI Pro', 'Ekahau-to-Revit', 'BIM', 'WPF'],
+  },
+  {
     organization: 'KNB Food',
     role: 'Software Engineer Intern',
     period: 'May 2025 — August 2025',
