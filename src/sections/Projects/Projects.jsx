@@ -18,10 +18,10 @@ const projects = [
     title: 'AstraLink',
     subtitle: 'Space Launch Tracker',
     description:
-      'A web application for tracking space launches, exploring mission details, and presenting launch data through a clean and accessible interface.',
-    technologies: ['Django', 'Python', 'JavaScript'],
+      'A space launch tracker with historical reliability analytics across 700+ launches, per-agency and rocket family success rates, and AI-powered mission briefings generated via the Anthropic API.',
+    technologies: ['Django', 'React', 'PostgreSQL'],
     image: astralinkPreview,
-    liveDemo: 'https://youtu.be/OMstUhgU58c',
+    liveDemo: 'https://astralink-pi.vercel.app/',
     github: 'https://github.com/tidjanioff/astra-link',
   },
 ]
