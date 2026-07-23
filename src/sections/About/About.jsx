@@ -33,13 +33,12 @@ function About() {
       <div className={styles.content}>
         <div className={styles.copy}>
           <p>
-            I’m <strong>Tidjani</strong>, a Software Developer and CS student at <strong>Université de Montréal</strong>, working toward a career in Software Engineering and 
+            I’m <strong>Tidjani</strong>, a CS student at <strong>Université de Montréal</strong>, working toward a career in Software Engineering and 
             building software that solves real-world problems.
           </p>
 
           <p>
-            My work focuses on backend engineering, software systems, and I'm currently expanding into AI integration and software tooling. 
-            My main focus right now is <strong>Rekat</strong>, a plug-in developed in collaboration with <strong>BPA</strong> to improve interoperability between BIM models and Wi-Fi 
+            My main focus right now is my <strong>capstone project</strong>, a plug-in developed in collaboration with <strong>BPA</strong> to improve interoperability between BIM models and Wi-Fi 
             planning workflows, making the exchange between Autodesk Revit and Ekahau AI Pro more reliable, maintainable, and usable in real-world engineering contexts.
           </p>
 

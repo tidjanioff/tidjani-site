@@ -1,0 +1,196 @@
+.capstone {
+  width: min(1000px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 56px 0;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 36px;
+}
+
+.heading h1 {
+  flex: 0 0 auto;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}
+
+.heading h1 span {
+  color: var(--github-background-color);
+}
+
+.headingLine {
+  width: min(360px, 35vw);
+  height: 1px;
+  background-color: var(--text-color);
+  opacity: 0.25;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 64px);
+  padding: 28px 0 28px 28px;
+  border-left: 2px solid color-mix(in srgb, var(--github-background-color) 46%, transparent);
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.period {
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  opacity: 0.72;
+}
+
+.tech {
+  max-width: 23ch;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--github-background-color);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.details h2 {
+  margin: 0 0 18px;
+  color: var(--text-color);
+  font-size: clamp(1.25rem, 2.3vw, 1.55rem);
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.description li {
+  position: relative;
+  margin: 0;
+  padding-left: 22px;
+  font-size: clamp(0.96rem, 1.4vw, 1.04rem);
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+.description li::before {
+  content: '\25B9';
+  position: absolute;
+  top: 0.05em;
+  left: 0;
+  color: var(--github-background-color);
+  font-size: 0.86rem;
+}
+
+.technology {
+  color: var(--github-background-color);
+  font-weight: 600;
+}
+
+.trackingLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--github-background-color);
+  font: 650 0.9rem/1.4 -apple-system, BlinkMacSystemFont, sans-serif;
+  text-decoration: none;
+}
+
+.trackingLink span {
+  transition: transform 180ms ease;
+}
+
+.trackingLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.trackingLink:hover span,
+.trackingLink:focus-visible span {
+  transform: translate(2px, -2px);
+}
+
+.trackingLink:focus-visible {
+  border-radius: 3px;
+  outline: 2px solid var(--github-background-color);
+  outline-offset: 4px;
+}
+
+@media (max-width: 800px) {
+  .capstone {
+    width: min(680px, calc(100% - 40px));
+    padding: 44px 0;
+  }
+
+  .heading {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .headingLine {
+    flex: 1;
+    width: auto;
+  }
+
+  .entry {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 0 24px 24px;
+  }
+
+  .tech {
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .capstone {
+    width: calc(100% - 32px);
+    padding: 36px 0;
+  }
+
+  .heading {
+    margin-bottom: 28px;
+  }
+
+  .heading h1 {
+    font-size: 1.75rem;
+  }
+
+  .entry {
+    padding: 22px 0 22px 18px;
+  }
+
+  .description li {
+    padding-left: 20px;
+    font-size: 0.94rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .capstone {
+    transform: none !important;
+  }
+
+  .trackingLink span {
+    transition: none;
+  }
+}

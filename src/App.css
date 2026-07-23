@@ -14,6 +14,7 @@
     --tag-border: rgb(255, 255, 255);
     --tag-text: var(--text-color);
     --project-title: #00eaff;
+    --skills-color:#00646d;
 }
 
 [data-theme = 'dark'] {
@@ -32,6 +33,7 @@
     --tag-border: #212121;
     --tag-text: var(--text-color);
     --project-title: #00eaff;
+    --skills-color:#00eaff;
 }
 
 body {

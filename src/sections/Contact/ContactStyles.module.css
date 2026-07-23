@@ -25,6 +25,16 @@
   opacity: 0.78;
 }
 
+.contact .skillsLine {
+  margin-bottom: 8px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+
+  color: var(--skills-color);
+}
+
 .contactButton {
   display: inline-flex;
   align-items: center;

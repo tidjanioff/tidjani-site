@@ -54,8 +54,21 @@ function Hero() {
                 initial={{opacity:0, y:30}} animate={{opacity:1, y:0}}
                 transition={{duration:0.6}}
                 style={{
-                    marginBottom:'18px',
-                    marginTop:'0px',}}>Software Developer</motion.h2>
+                    marginBottom:'0px',
+                    marginTop:'0px',}}>CS Student @ UdeM</motion.h2>
+                <motion.div
+                    className={styles.availabilityBadge}
+                    initial={{opacity:0, y:20}} animate={{opacity:1, y:0}}
+                    transition={{duration:0.6}}
+                     style={{
+                        marginBottom: '5px',
+                    }}
+                >
+                    <span className={styles.availabilityDot} aria-hidden="true" 
+                    
+                   />
+                    Open to Fall 2026 internships
+                </motion.div>
                 <div className={styles.socials}>
                     <span>
                         <a href='https://www.linkedin.com/in/tidjani-d/' target='_blank'>
@@ -86,7 +99,7 @@ function Hero() {
                 initial={{opacity:0, y:30}} animate={{opacity:1, y:0}}
                 transition={{duration:0.6}}
                 className={styles.description}>
-                Based in Canada, building software that solves real-world problems. 
+                Based in Montreal, building software that solves real-world problems. 
                 </motion.p>
                 <a href="mailto:tidjanioff@gmail.com">
                     <motion.button 

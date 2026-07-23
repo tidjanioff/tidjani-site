@@ -6,6 +6,7 @@ import Hero from './sections/Hero/Hero';
 import Projects from './sections/Projects/Projects';
 import Skills from './sections/Skills/Skills';
 import About from './sections/About/About';
+import Capstone from './sections/Capstone/Capstone';
 import Work from './sections/Work/Work';
 import Certifications from './sections/Certifications/Certifications';
 
@@ -14,6 +15,7 @@ function App() {
   <>
     <Hero/>
     <About/>
+    <Capstone/>
     <Work/>
     <Projects/>
     {/* <Skills/> */}

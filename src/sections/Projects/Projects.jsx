@@ -36,7 +36,7 @@ function Projects() {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
-        <h1><span>/&nbsp;</span> projects</h1>
+        <h1><span>/&nbsp;</span> personal projects</h1>
         <div className={styles.headingLine} aria-hidden="true" />
         <a
           className={styles.allProjectsLink}

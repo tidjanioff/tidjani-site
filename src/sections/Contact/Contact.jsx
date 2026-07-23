@@ -12,8 +12,9 @@ function Contact() {
       transition={{ duration: 0.55, ease: 'easeOut' }}
     >
       <h1>Let’s build something.</h1>
+      <p className={styles.skillsLine}>Java · Python · C#/.NET · React</p>
       <p>
-        Currently looking for Software Engineer/Developer internship roles for Fall 2026. 
+        CS student building full-stack systems, from backend logic to the interfaces people use.
       </p>
       <a className={styles.contactButton} href="mailto:tidjanioff@gmail.com">
         Get in touch

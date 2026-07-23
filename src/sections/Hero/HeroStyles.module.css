@@ -91,6 +91,31 @@
     align-self: center;
 }
 
+.availabilityBadge {
+    display: inline-flex;
+    align-items: center;
+    align-self: center;
+    gap: 8px;
+    width: fit-content;
+    margin-bottom: -4px;
+    padding: 6px 11px;
+    border: 1px solid color-mix(in srgb, var(--text-color) 22%, transparent);
+    border-radius: 999px;
+    color: color-mix(in srgb, var(--text-color) 72%, transparent);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.availabilityDot {
+    width: 7px;
+    height: 7px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background-color: color-mix(in srgb, #84b2bd 82%, var(--text-color));
+}
+
 .info {
     display: flex;
     flex-direction: column;
